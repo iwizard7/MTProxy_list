@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-10-05T04:49:19.727389+00:00",
-  "discovered": 300,
-  "tcp_reachable": 132,
-  "note": "TCP reachability only; not proof of a successful Telegram MTProto session."
+  "updated_at": "2026-10-05T05:07:47.495612+00:00",
+  "discovered": 26,
+  "mtproto_verified": 20,
+  "average_latency_ms": 1038.75,
+  "check": "real MTProto relay health check",
+  "verification": [
+    "TCP connect",
+    "MTProxy obfuscated2 handshake",
+    "MTProto req_pq_multi",
+    "valid Telegram resPQ response"
+  ],
+  "note": "working.txt contains only proxies that passed the real MTProto health check."
 }
