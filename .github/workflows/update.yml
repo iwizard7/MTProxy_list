@@ -2,10 +2,7 @@ name: Update MTProto proxy list
 
 on:
   schedule:
-    # Каждые 15 минут
     - cron: "*/15 * * * *"
-
-  # Возможность запустить вручную
   workflow_dispatch:
 
 permissions:
@@ -17,17 +14,16 @@ concurrency:
 
 jobs:
   update:
-    name: Collect and update proxies
+    name: Collect and verify proxies
     runs-on: ubuntu-latest
-
-    # Защита от зависшего запуска
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -40,9 +36,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Collect MTProto proxies
+      - name: Collect and verify MTProto proxies
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PYTHONUNBUFFERED: "1"
         run: |
           python src/collector.py
@@ -59,6 +54,15 @@ jobs:
           fi
 
           echo
+          echo "===== All proxies ====="
+
+          if [ -f proxies/all.txt ]; then
+            wc -l proxies/all.txt
+          else
+            echo "all.txt not found"
+          fi
+
+          echo
           echo "===== Working proxies ====="
 
           if [ -f proxies/working.txt ]; then
@@ -67,8 +71,10 @@ jobs:
             echo "working.txt not found"
           fi
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
+          set -e
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
@@ -79,11 +85,14 @@ jobs:
             exit 0
           fi
 
-          echo "Changes detected:"
           git diff --cached --stat
 
           git commit -m "Update MTProto proxy list"
-          git push
+
+          git fetch origin main
+          git rebase origin/main
+
+          git push origin HEAD:main
 
       - name: Upload results
         if: always()
