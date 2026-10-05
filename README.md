@@ -1,3 +1,4 @@
+[![Update MTProto proxy list](https://github.com/iwizard7/MTProxy_list/actions/workflows/update.yml/badge.svg)](https://github.com/iwizard7/MTProxy_list/actions/workflows/update.yml)
 # Mtproxy_list
 
 Automatically refreshed list of publicly advertised Telegram MTProto proxy links.
