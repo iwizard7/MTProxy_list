@@ -1,128 +1,336 @@
 #!/usr/bin/env python3
-"""Collect publicly advertised MTProto links from a small, explicit source set.
 
-This deliberately does not scan arbitrary IP ranges or probe undisclosed hosts.
-Only endpoints explicitly published as MTProto proxy links are checked.
-"""
-from __future__ import annotations
-
-import ipaddress
 import json
 import os
 import re
 import socket
-import time
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import parse_qs, urlparse
+from urllib.parse import parse_qs, unquote, urlparse
 
-import requests
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "proxies"
-OUT.mkdir(exist_ok=True)
-TIMEOUT = float(os.getenv("CHECK_TIMEOUT", "3"))
-MAX_CANDIDATES = int(os.getenv("MAX_CANDIDATES", "300"))
-HEADERS = {"User-Agent": "Mtproxy-list-collector/1.0 (public-link-validation)"}
+# ============================================================
+# Configuration
+# ============================================================
 
-# Explicit public repositories known to publish proxy lists. Add sources via PR.
-RAW_SOURCES = [
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = ROOT / "proxies"
+
+ALL_FILE = OUTPUT_DIR / "all.txt"
+WORKING_FILE = OUTPUT_DIR / "working.txt"
+STATS_FILE = OUTPUT_DIR / "stats.json"
+
+REQUEST_TIMEOUT = 15
+TCP_TIMEOUT = 3
+
+# Number of parallel TCP checks.
+MAX_WORKERS = 40
+
+# Public sources with proxy links.
+SOURCES = [
+    "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/all_proxies.txt",
     "https://raw.githubusercontent.com/SoliSpirit/mtproto/master/all_proxies.txt",
-    "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt",
 ]
-GITHUB_QUERY = "MTProto proxies in:readme"
 
-def extract_links(text: str) -> set[str]:
-    pattern = re.compile(r"(?i)(?:tg://proxy|https?://t\.me/proxy)\?[^\s<>\"']+")
-    return {m.group(0).rstrip(".,);]") for m in pattern.finditer(text)}
 
-def parse_link(link: str):
-    try:
-        p = urlparse(link)
-        q = parse_qs(p.query)
-        host = q.get("server", [""])[0].strip()
-        port = int(q.get("port", ["0"])[0])
-        secret = q.get("secret", [""])[0].strip()
-        if not host or not (1 <= port <= 65535) or not re.fullmatch(r"[A-Fa-f0-9]+", secret):
-            return None
-        # Avoid local/private/link-local and special-use destinations.
-        try:
-            addr = ipaddress.ip_address(host)
-            if not addr.is_global:
-                return None
-        except ValueError:
-            if len(host) > 253 or not re.fullmatch(r"(?i)(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)(?:\.(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?))*", host):
-                return None
-        return host, port
-    except (ValueError, IndexError):
+# ============================================================
+# Regex / parsing
+# ============================================================
+
+TG_PROXY_RE = re.compile(
+    r"(?:tg://proxy|https://t\.me/proxy)\?[^\s\"'<>]+",
+    re.IGNORECASE,
+)
+
+
+def normalize_proxy_url(url: str) -> str | None:
+    """
+    Normalize tg://proxy and https://t.me/proxy URLs.
+
+    Expected format:
+      tg://proxy?server=1.2.3.4&port=443&secret=...
+    """
+
+    url = url.strip()
+
+    if not url:
         return None
 
-def discover() -> set[str]:
-    found = set()
-    session = requests.Session()
-    session.headers.update(HEADERS)
-    for url in RAW_SOURCES:
-        try:
-            r = session.get(url, timeout=8)
-            if r.ok:
-                found.update(extract_links(r.text))
-        except requests.RequestException as e:
-            print(f"Source unavailable: {url}: {e}")
-    # GitHub code search requires authentication; search repository metadata/readmes instead.
-    token = os.getenv("GITHUB_TOKEN")
-    if token:
-        try:
-            r = session.get(
-                "https://api.github.com/search/repositories",
-                params={"q": GITHUB_QUERY, "sort": "updated", "per_page": 10},
-                headers={"Authorization": f"Bearer {token}"},
-                timeout=8,
-            )
-            if r.ok:
-                for repo in r.json().get("items", []):
-                    branch = repo.get("default_branch", "main")
-                    raw = f"https://raw.githubusercontent.com/{repo['full_name']}/{branch}/README.md"
-                    try:
-                        rr = session.get(raw, timeout=6)
-                        if rr.ok:
-                            found.update(extract_links(rr.text))
-                    except requests.RequestException:
-                        pass
-        except (requests.RequestException, ValueError) as e:
-            print(f"GitHub discovery unavailable: {e}")
-    return found
+    # Remove common surrounding punctuation.
+    url = url.strip("()[]{}<>,;\"'")
 
-def reachable(host: str, port: int) -> bool:
+    if url.startswith("https://t.me/proxy?"):
+        parsed = urlparse(url)
+        query = parse_qs(parsed.query)
+
+    elif url.startswith("tg://proxy?"):
+        parsed = urlparse(url)
+        query = parse_qs(parsed.query)
+
+    else:
+        return None
+
+    server = query.get("server", [None])[0]
+    port = query.get("port", [None])[0]
+    secret = query.get("secret", [None])[0]
+
+    if not server or not port or not secret:
+        return None
+
+    server = unquote(server).strip()
+    port = unquote(port).strip()
+    secret = unquote(secret).strip()
+
     try:
-        with socket.create_connection((host, port), timeout=TIMEOUT):
+        port_int = int(port)
+    except ValueError:
+        return None
+
+    if not (1 <= port_int <= 65535):
+        return None
+
+    # We intentionally keep only public IPv4 addresses.
+    try:
+        ip = socket.inet_aton(server)
+    except OSError:
+        return None
+
+    # inet_aton accepts some non-standard forms, so require
+    # normal dotted IPv4 representation.
+    parts = server.split(".")
+
+    if len(parts) != 4:
+        return None
+
+    try:
+        if any(not 0 <= int(part) <= 255 for part in parts):
+            return None
+    except ValueError:
+        return None
+
+    first, second = int(parts[0]), int(parts[1])
+
+    # Private / reserved / local IPv4 ranges.
+    private_or_reserved = (
+        first == 10
+        or first == 127
+        or (first == 172 and 16 <= second <= 31)
+        or (first == 192 and second == 168)
+        or first == 0
+        or first >= 224
+    )
+
+    if private_or_reserved:
+        return None
+
+    return f"tg://proxy?server={server}&port={port_int}&secret={secret}"
+
+
+# ============================================================
+# Download
+# ============================================================
+
+def download_source(url: str) -> str:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "MTProtoProxyCollector/1.0",
+        },
+    )
+
+    with urllib.request.urlopen(
+        request,
+        timeout=REQUEST_TIMEOUT,
+    ) as response:
+        data = response.read()
+
+    return data.decode("utf-8", errors="ignore")
+
+
+# ============================================================
+# Collection
+# ============================================================
+
+def collect_from_sources() -> set[str]:
+    proxies: set[str] = set()
+
+    for source in SOURCES:
+        try:
+            print(f"Downloading: {source}")
+
+            text = download_source(source)
+
+            matches = TG_PROXY_RE.findall(text)
+
+            print(f"  Found links: {len(matches)}")
+
+            for match in matches:
+                normalized = normalize_proxy_url(match)
+
+                if normalized:
+                    proxies.add(normalized)
+
+        except Exception as exc:
+            print(f"  ERROR: {exc}")
+
+    return proxies
+
+
+# ============================================================
+# Proxy parsing
+# ============================================================
+
+def parse_proxy(proxy: str):
+    parsed = urlparse(proxy)
+
+    query = parse_qs(parsed.query)
+
+    server = query.get("server", [None])[0]
+    port = query.get("port", [None])[0]
+
+    if not server or not port:
+        return None
+
+    try:
+        port = int(port)
+    except ValueError:
+        return None
+
+    return server, port
+
+
+# ============================================================
+# TCP test
+# ============================================================
+
+def tcp_reachable(proxy: str) -> bool:
+    parsed = parse_proxy(proxy)
+
+    if not parsed:
+        return False
+
+    host, port = parsed
+
+    try:
+        with socket.create_connection(
+            (host, port),
+            timeout=TCP_TIMEOUT,
+        ):
             return True
+
     except (OSError, TimeoutError):
         return False
 
-def main():
-    candidates = discover()
-    print(f"Discovered {len(candidates)} distinct public links")
-    # Stable cap prevents a source from triggering unbounded connection attempts.
-    candidates = sorted(candidates)[:MAX_CANDIDATES]
+
+def check_proxies(proxies: list[str]) -> list[str]:
     working = []
-    for link in candidates:
-        parsed = parse_link(link)
-        if not parsed:
-            continue
-        host, port = parsed
-        if reachable(host, port):
-            working.append(link)
-        time.sleep(0.05)
-    (OUT / "working.txt").write_text("\n".join(sorted(set(working))) + ("\n" if working else ""), encoding="utf-8")
-    (OUT / "all.txt").write_text("\n".join(sorted(candidates)) + ("\n" if candidates else ""), encoding="utf-8")
+
+    total = len(proxies)
+
+    print(
+        f"Checking TCP connectivity for {total} proxies "
+        f"using {MAX_WORKERS} workers..."
+    )
+
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+
+        futures = {
+            executor.submit(tcp_reachable, proxy): proxy
+            for proxy in proxies
+        }
+
+        completed = 0
+
+        for future in as_completed(futures):
+            proxy = futures[future]
+
+            completed += 1
+
+            try:
+                if future.result():
+                    working.append(proxy)
+            except Exception:
+                pass
+
+            if completed % 50 == 0 or completed == total:
+                print(
+                    f"  Checked {completed}/{total}, "
+                    f"reachable: {len(working)}"
+                )
+
+    return sorted(set(working))
+
+
+# ============================================================
+# Output
+# ============================================================
+
+def write_outputs(all_proxies: list[str], working: list[str]) -> None:
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    ALL_FILE.write_text(
+        "\n".join(all_proxies) + ("\n" if all_proxies else ""),
+        encoding="utf-8",
+    )
+
+    WORKING_FILE.write_text(
+        "\n".join(working) + ("\n" if working else ""),
+        encoding="utf-8",
+    )
+
     stats = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "discovered": len(candidates),
+        "discovered": len(all_proxies),
         "tcp_reachable": len(working),
-        "note": "TCP reachability only; not proof of a successful Telegram MTProto session."
+        "note": (
+            "TCP reachability only; not proof of a successful "
+            "Telegram MTProto session."
+        ),
     }
-    (OUT / "stats.json").write_text(json.dumps(stats, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps(stats))
+
+    STATS_FILE.write_text(
+        json.dumps(stats, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+    print()
+    print("===== Statistics =====")
+    print(json.dumps(stats, ensure_ascii=False))
+    print("======================")
+    print()
+
+
+# ============================================================
+# Main
+# ============================================================
+
+def main() -> None:
+    print("Starting MTProto proxy collector...")
+    print()
+
+    proxies = collect_from_sources()
+
+    print()
+    print(f"Discovered {len(proxies)} distinct public links")
+
+    if not proxies:
+        print("No valid proxies discovered.")
+        write_outputs([], [])
+        return
+
+    all_proxies = sorted(proxies)
+
+    working = check_proxies(all_proxies)
+
+    write_outputs(all_proxies, working)
+
+    print(
+        f"Finished: {len(all_proxies)} discovered, "
+        f"{len(working)} TCP reachable."
+    )
+
 
 if __name__ == "__main__":
     main()
