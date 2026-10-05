@@ -2,16 +2,26 @@ name: Update MTProto proxy list
 
 on:
   schedule:
-    # Каждые 30 минут
-    - cron: "17,47 * * * *"
+    # Каждые 15 минут
+    - cron: "*/15 * * * *"
+
+  # Возможность запустить вручную
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: mtproto-proxy-update
+  cancel-in-progress: true
+
 jobs:
   update:
+    name: Collect and update proxies
     runs-on: ubuntu-latest
+
+    # Защита от зависшего запуска
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
@@ -23,6 +33,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
 
       - name: Install dependencies
         run: |
@@ -32,10 +43,31 @@ jobs:
       - name: Collect MTProto proxies
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYTHONUNBUFFERED: "1"
         run: |
           python src/collector.py
 
-      - name: Commit updated proxy lists
+      - name: Show generated statistics
+        if: always()
+        run: |
+          echo "===== Proxy statistics ====="
+
+          if [ -f proxies/stats.json ]; then
+            cat proxies/stats.json
+          else
+            echo "stats.json not found"
+          fi
+
+          echo
+          echo "===== Working proxies ====="
+
+          if [ -f proxies/working.txt ]; then
+            wc -l proxies/working.txt
+          else
+            echo "working.txt not found"
+          fi
+
+      - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -43,8 +75,24 @@ jobs:
           git add proxies/
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Update MTProto proxy list"
-            git push
+            echo "No changes detected."
+            exit 0
           fi
+
+          echo "Changes detected:"
+          git diff --cached --stat
+
+          git commit -m "Update MTProto proxy list"
+          git push
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mtproto-proxy-results
+          path: |
+            proxies/all.txt
+            proxies/working.txt
+            proxies/stats.json
+          if-no-files-found: warn
+          retention-days: 7
