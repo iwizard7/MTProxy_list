@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-08T00:16:07.047181+00:00",
+  "updated_at": "2026-10-08T06:19:51.853965+00:00",
   "discovered": 40,
-  "mtproto_verified": 32,
-  "average_latency_ms": 880.64,
+  "mtproto_verified": 31,
+  "average_latency_ms": 758.84,
   "check": "real MTProto relay health check",
   "verification": [
     "TCP connect",
