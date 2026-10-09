@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "runs": 2,
+  "runs": 3,
   "endpoints": {
     "0000.ir.ir.ir.meli-n12.info:8443": {
       "url": "tg://proxy?server=0000.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09",
@@ -8,16 +8,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 572.82,
+      "last_rtt_ms": 450.6,
       "rtt_samples": [
         3869.91,
-        572.82
+        572.82,
+        450.6
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -33,16 +35,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 764.36,
+      "last_rtt_ms": 544.96,
       "rtt_samples": [
         515.99,
-        764.36
+        764.36,
+        544.96
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -59,16 +63,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 380.79,
+      "last_rtt_ms": 357.98,
       "rtt_samples": [
         412.5,
-        380.79
+        380.79,
+        357.98
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -84,16 +90,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 428.28,
+      "last_rtt_ms": 385.22,
       "rtt_samples": [
         422.52,
-        428.28
+        428.28,
+        385.22
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -109,16 +117,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 487.07,
+      "last_rtt_ms": 466.63,
       "rtt_samples": [
         513.52,
-        487.07
+        487.07,
+        466.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -134,16 +144,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 477.17,
+      "last_rtt_ms": 445.47,
       "rtt_samples": [
         500.57,
-        477.17
+        477.17,
+        445.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -159,16 +171,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 431.7,
+      "last_rtt_ms": 389.51,
       "rtt_samples": [
         424.35,
-        431.7
+        431.7,
+        389.51
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -184,16 +198,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 434.97,
+      "last_rtt_ms": 382.02,
       "rtt_samples": [
         412.9,
-        434.97
+        434.97,
+        382.02
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -209,16 +225,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 428.1,
+      "last_rtt_ms": 400.9,
       "rtt_samples": [
         418.99,
-        428.1
+        428.1,
+        400.9
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -234,16 +252,18 @@
       "port": 443,
       "secret": "YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 397.87,
+      "last_rtt_ms": 349.87,
       "rtt_samples": [
         366.19,
-        397.87
+        397.87,
+        349.87
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -260,16 +280,18 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 428.39,
+      "last_rtt_ms": 389.89,
       "rtt_samples": [
         409.87,
-        428.39
+        428.39,
+        389.89
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -286,16 +308,18 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 437.7,
+      "last_rtt_ms": 404.97,
       "rtt_samples": [
         421.98,
-        437.7
+        437.7,
+        404.97
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -312,16 +336,18 @@
       "port": 8443,
       "secret": "79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 426.99,
+      "last_rtt_ms": 395.48,
       "rtt_samples": [
         414.99,
-        426.99
+        426.99,
+        395.48
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -337,16 +363,18 @@
       "port": 8443,
       "secret": "79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 431.81,
+      "last_rtt_ms": 408.9,
       "rtt_samples": [
         410.71,
-        431.81
+        431.81,
+        408.9
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -362,16 +390,18 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 424.79,
+      "last_rtt_ms": 399.52,
       "rtt_samples": [
         421.53,
-        424.79
+        424.79,
+        399.52
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -388,16 +418,18 @@
       "port": 8443,
       "secret": "79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 438.71,
+      "last_rtt_ms": 393.19,
       "rtt_samples": [
         418.91,
-        438.71
+        438.71,
+        393.19
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -436,16 +468,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 402.03,
+      "last_rtt_ms": 352.18,
       "rtt_samples": [
         405.13,
-        402.03
+        402.03,
+        352.18
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -461,16 +495,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 424.33,
+      "last_rtt_ms": 391.03,
       "rtt_samples": [
         419.05,
-        424.33
+        424.33,
+        391.03
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -486,16 +522,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 425.91,
+      "last_rtt_ms": 392.06,
       "rtt_samples": [
         416.24,
-        425.91
+        425.91,
+        392.06
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -511,16 +549,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 728.63,
+      "last_rtt_ms": 571.24,
       "rtt_samples": [
         543.93,
-        728.63
+        728.63,
+        571.24
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -537,13 +577,14 @@
       "port": 443,
       "secret": "eeDarKDarKDarKDarKDarK",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -559,16 +600,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 424.9,
+      "last_rtt_ms": 395.4,
       "rtt_samples": [
         426.18,
-        424.9
+        424.9,
+        395.4
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -584,16 +627,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 410.51,
+      "last_rtt_ms": 370.91,
       "rtt_samples": [
         409.67,
-        410.51
+        410.51,
+        370.91
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -609,16 +654,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 402.49,
+      "last_rtt_ms": 364.3,
       "rtt_samples": [
         411.16,
-        402.49
+        402.49,
+        364.3
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -635,13 +682,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -656,13 +704,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -677,13 +726,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -698,13 +748,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -719,13 +770,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -740,13 +792,14 @@
       "port": 25565,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -761,16 +814,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 302.68,
+      "last_rtt_ms": 333.53,
       "rtt_samples": [
         282.31,
-        302.68
+        302.68,
+        333.53
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -787,16 +842,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 747.61,
+      "last_rtt_ms": 606.44,
       "rtt_samples": [
         597.44,
-        747.61
+        747.61,
+        606.44
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -813,16 +870,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 492.62,
+      "last_rtt_ms": 428.58,
       "rtt_samples": [
         467.54,
-        492.62
+        492.62,
+        428.58
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -858,10 +917,10 @@
       "port": 2399,
       "secret": "dd59a5a92de85207d1aaec30ac59befa88",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": "2026-10-09T06:03:15.138824+00:00",
       "ok_count": 2,
-      "fail_count": 0,
+      "fail_count": 1,
       "last_rtt_ms": 401.75,
       "rtt_samples": [
         410.71,
@@ -869,14 +928,15 @@
       ],
       "recent": [
         true,
-        true
+        true,
+        false
       ],
       "sources": [
         "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt",
         "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt"
       ],
       "last_engine": "library",
-      "last_error": null
+      "last_error": "NETWORK_ERROR"
     },
     "31.hide.newflamingodomain.co.uk:8443": {
       "url": "tg://proxy?server=31.hide.newflamingodomain.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09",
@@ -884,16 +944,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 677.32,
+      "last_rtt_ms": 590.0,
       "rtt_samples": [
         519.16,
-        677.32
+        677.32,
+        590.0
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -910,16 +972,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 517.67,
+      "last_rtt_ms": 473.3,
       "rtt_samples": [
         557.47,
-        517.67
+        517.67,
+        473.3
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -935,16 +999,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 593.69,
+      "last_rtt_ms": 616.31,
       "rtt_samples": [
         503.82,
-        593.69
+        593.69,
+        616.31
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -961,13 +1027,14 @@
       "port": 443,
       "secret": "eeDarKDarKDarKDarKDarK",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -1051,16 +1118,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 436.23,
+      "last_rtt_ms": 379.67,
       "rtt_samples": [
         407.5,
-        436.23
+        436.23,
+        379.67
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1076,16 +1145,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 431.73,
+      "last_rtt_ms": 390.11,
       "rtt_samples": [
         418.34,
-        431.73
+        431.73,
+        390.11
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1124,16 +1195,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 473.8,
+      "last_rtt_ms": 444.77,
       "rtt_samples": [
         522.3,
-        473.8
+        473.8,
+        444.77
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1173,16 +1246,18 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 485.23,
+      "last_rtt_ms": 453.17,
       "rtt_samples": [
         514.82,
-        485.23
+        485.23,
+        453.17
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1199,10 +1274,10 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": "2026-10-09T06:03:15.138824+00:00",
       "ok_count": 2,
-      "fail_count": 0,
+      "fail_count": 1,
       "last_rtt_ms": 496.98,
       "rtt_samples": [
         515.86,
@@ -1210,14 +1285,15 @@
       ],
       "recent": [
         true,
-        true
+        true,
+        false
       ],
       "sources": [
         "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt",
         "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt"
       ],
       "last_engine": "library",
-      "last_error": null
+      "last_error": "NETWORK_ERROR"
     },
     "65.109.191.104:8443": {
       "url": "tg://proxy?server=65.109.191.104&port=8443&secret=dd79e344818749bd7ac519130220c25d09",
@@ -1225,16 +1301,18 @@
       "port": 8443,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 493.24,
+      "last_rtt_ms": 449.52,
       "rtt_samples": [
         505.0,
-        493.24
+        493.24,
+        449.52
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1320,16 +1398,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 580.87,
+      "last_rtt_ms": 497.69,
       "rtt_samples": [
         535.54,
-        580.87
+        580.87,
+        497.69
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1435,16 +1515,18 @@
       "port": 8,
       "secret": "ameuTC0XO0FodFQ1yzE6OQQ1yzE60Q",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 399.03,
+      "last_rtt_ms": 343.19,
       "rtt_samples": [
         379.03,
-        399.03
+        399.03,
+        343.19
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1481,16 +1563,18 @@
       "port": 8443,
       "secret": "79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 453.8,
+      "last_rtt_ms": 392.43,
       "rtt_samples": [
         411.42,
-        453.8
+        453.8,
+        392.43
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1507,16 +1591,18 @@
       "port": 8443,
       "secret": "79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 431.63,
+      "last_rtt_ms": 382.36,
       "rtt_samples": [
         408.92,
-        431.63
+        431.63,
+        382.36
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1556,16 +1642,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 418.81,
+      "last_rtt_ms": 404.91,
       "rtt_samples": [
         411.23,
-        418.81
+        418.81,
+        404.91
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1604,16 +1692,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 389.4,
+      "last_rtt_ms": 353.47,
       "rtt_samples": [
         405.45,
-        389.4
+        389.4,
+        353.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1629,16 +1719,18 @@
       "port": 443,
       "secret": "3XnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 394.51,
+      "last_rtt_ms": 368.25,
       "rtt_samples": [
         400.85,
-        394.51
+        394.51,
+        368.25
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1677,16 +1769,18 @@
       "port": 443,
       "secret": "dd6a67ae4c2d173b4168745435cb313a39",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 726.1,
+      "last_rtt_ms": 646.05,
       "rtt_samples": [
         667.53,
-        726.1
+        726.1,
+        646.05
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1703,16 +1797,18 @@
       "port": 443,
       "secret": "dd6a67ae4c2d173b4168745435cb313a39",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 687.55,
+      "last_rtt_ms": 681.59,
       "rtt_samples": [
         707.66,
-        687.55
+        687.55,
+        681.59
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1752,16 +1848,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 459.42,
+      "last_rtt_ms": 586.8,
       "rtt_samples": [
         604.66,
-        459.42
+        459.42,
+        586.8
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1824,16 +1922,18 @@
       "port": 853,
       "secret": "ee54ce330e4690cc297d2b031ff3f288b06d742e616b656e61692e636c69636b",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 2864.87,
+      "last_rtt_ms": 741.75,
       "rtt_samples": [
         672.64,
-        2864.87
+        2864.87,
+        741.75
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1850,16 +1950,18 @@
       "port": 2053,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 432.0,
+      "last_rtt_ms": 377.84,
       "rtt_samples": [
         445.75,
-        432.0
+        432.0,
+        377.84
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1876,16 +1978,18 @@
       "port": 22,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 467.97,
+      "last_rtt_ms": 398.25,
       "rtt_samples": [
         466.32,
-        467.97
+        467.97,
+        398.25
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1902,16 +2006,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 728.64,
+      "last_rtt_ms": 473.19,
       "rtt_samples": [
         450.1,
-        728.64
+        728.64,
+        473.19
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1928,16 +2034,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 713.47,
+      "last_rtt_ms": 509.46,
       "rtt_samples": [
         594.18,
-        713.47
+        713.47,
+        509.46
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1953,16 +2061,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 434.72,
+      "last_rtt_ms": 378.73,
       "rtt_samples": [
         460.21,
-        434.72
+        434.72,
+        378.73
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -1979,16 +2089,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 802.69,
+      "last_rtt_ms": 446.77,
       "rtt_samples": [
         459.6,
-        802.69
+        802.69,
+        446.77
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2004,16 +2116,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 484.53,
+      "last_rtt_ms": 430.05,
       "rtt_samples": [
         443.84,
-        484.53
+        484.53,
+        430.05
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2029,16 +2143,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 482.6,
+      "last_rtt_ms": 1792.4,
       "rtt_samples": [
         462.34,
-        482.6
+        482.6,
+        1792.4
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2055,16 +2171,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 418.27,
+      "last_rtt_ms": 379.78,
       "rtt_samples": [
         471.91,
-        418.27
+        418.27,
+        379.78
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2104,16 +2222,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 524.68,
+      "last_rtt_ms": 468.18,
       "rtt_samples": [
         540.03,
-        524.68
+        524.68,
+        468.18
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2130,16 +2250,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 525.63,
+      "last_rtt_ms": 457.63,
       "rtt_samples": [
         463.23,
-        525.63
+        525.63,
+        457.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2156,10 +2278,10 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": "2026-10-09T06:03:15.138824+00:00",
       "ok_count": 2,
-      "fail_count": 0,
+      "fail_count": 1,
       "last_rtt_ms": 726.22,
       "rtt_samples": [
         682.35,
@@ -2167,13 +2289,14 @@
       ],
       "recent": [
         true,
-        true
+        true,
+        false
       ],
       "sources": [
         "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt"
       ],
       "last_engine": "library",
-      "last_error": null
+      "last_error": "CONNECT_TIMEOUT"
     },
     "bo0ji.co.uk:443": {
       "url": "tg://proxy?server=bo0ji.co.uk&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
@@ -2181,16 +2304,18 @@
       "port": 443,
       "secret": "ddf0eeb0bd9adc4fd4a93994ee3b2a216b",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 686.56,
+      "last_rtt_ms": 476.77,
       "rtt_samples": [
         561.98,
-        686.56
+        686.56,
+        476.77
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2207,16 +2332,18 @@
       "port": 2882,
       "secret": "dd10400103324995b07c030386e886e7f1",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 500.22,
+      "last_rtt_ms": 5375.07,
       "rtt_samples": [
         461.0,
-        500.22
+        500.22,
+        5375.07
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2233,16 +2360,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 465.86,
+      "last_rtt_ms": 391.44,
       "rtt_samples": [
         443.21,
-        465.86
+        465.86,
+        391.44
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2259,16 +2388,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 693.06,
+      "last_rtt_ms": 442.03,
       "rtt_samples": [
         415.51,
-        693.06
+        693.06,
+        442.03
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2285,16 +2416,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 590.88,
+      "last_rtt_ms": 576.38,
       "rtt_samples": [
         589.03,
-        590.88
+        590.88,
+        576.38
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2310,16 +2443,18 @@
       "port": 8443,
       "secret": "104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 539.2,
+      "last_rtt_ms": 418.0,
       "rtt_samples": [
         475.55,
-        539.2
+        539.2,
+        418.0
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2358,16 +2493,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 591.61,
+      "last_rtt_ms": 372.63,
       "rtt_samples": [
         424.66,
-        591.61
+        591.61,
+        372.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2384,16 +2521,18 @@
       "port": 7799,
       "secret": "dd10400103324995b07c030386e886e7f1",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 522.42,
+      "last_rtt_ms": 503.88,
       "rtt_samples": [
         539.84,
-        522.42
+        522.42,
+        503.88
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2410,16 +2549,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 560.95,
+      "last_rtt_ms": 412.15,
       "rtt_samples": [
         488.27,
-        560.95
+        560.95,
+        412.15
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2482,16 +2623,18 @@
       "port": 2083,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 404.82,
+      "last_rtt_ms": 384.6,
       "rtt_samples": [
         432.68,
-        404.82
+        404.82,
+        384.6
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2508,16 +2651,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 578.57,
+      "last_rtt_ms": 458.68,
       "rtt_samples": [
         470.31,
-        578.57
+        578.57,
+        458.68
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2534,16 +2679,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 426.79,
+      "last_rtt_ms": 393.85,
       "rtt_samples": [
         435.61,
-        426.79
+        426.79,
+        393.85
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2583,16 +2730,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 585.49,
+      "last_rtt_ms": 522.68,
       "rtt_samples": [
         548.16,
-        585.49
+        585.49,
+        522.68
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2608,16 +2757,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 457.06,
+      "last_rtt_ms": 424.3,
       "rtt_samples": [
         460.63,
-        457.06
+        457.06,
+        424.3
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2633,16 +2784,18 @@
       "port": 443,
       "secret": "eece59031f1109f05387b7155534c7ac87646e732e76646c2e6c6174",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 787.47,
+      "last_rtt_ms": 841.57,
       "rtt_samples": [
         775.18,
-        787.47
+        787.47,
+        841.57
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2659,16 +2812,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 409.14,
+      "last_rtt_ms": 364.05,
       "rtt_samples": [
         427.96,
-        409.14
+        409.14,
+        364.05
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2685,16 +2840,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 421.78,
+      "last_rtt_ms": 366.97,
       "rtt_samples": [
         453.84,
-        421.78
+        421.78,
+        366.97
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2711,16 +2868,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 477.98,
+      "last_rtt_ms": 451.91,
       "rtt_samples": [
         552.52,
-        477.98
+        477.98,
+        451.91
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2737,16 +2896,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 563.71,
+      "last_rtt_ms": 458.23,
       "rtt_samples": [
         450.85,
-        563.71
+        563.71,
+        458.23
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2808,16 +2969,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 536.08,
+      "last_rtt_ms": 488.82,
       "rtt_samples": [
         521.03,
-        536.08
+        536.08,
+        488.82
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2856,16 +3019,18 @@
       "port": 443,
       "secret": "eef767ebee5708dadc985d58ad6e04560664726976652e676f6f676c652e636f6d",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 620.2,
+      "last_rtt_ms": 626.88,
       "rtt_samples": [
         674.93,
-        620.2
+        620.2,
+        626.88
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2927,16 +3092,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 1600.74,
+      "last_rtt_ms": 479.99,
       "rtt_samples": [
         992.55,
-        1600.74
+        1600.74,
+        479.99
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -2953,16 +3120,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 1509.24,
+      "last_rtt_ms": 426.38,
       "rtt_samples": [
         453.1,
-        1509.24
+        1509.24,
+        426.38
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3002,16 +3171,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 437.75,
+      "last_rtt_ms": 387.37,
       "rtt_samples": [
         424.71,
-        437.75
+        437.75,
+        387.37
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3028,16 +3199,18 @@
       "port": 8443,
       "secret": "104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 516.38,
+      "last_rtt_ms": 419.1,
       "rtt_samples": [
         457.2,
-        516.38
+        516.38,
+        419.1
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3077,16 +3250,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 477.79,
+      "last_rtt_ms": 5405.31,
       "rtt_samples": [
         439.46,
-        477.79
+        477.79,
+        5405.31
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3149,16 +3324,18 @@
       "port": 2083,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 438.95,
+      "last_rtt_ms": 370.51,
       "rtt_samples": [
         432.59,
-        438.95
+        438.95,
+        370.51
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3198,13 +3375,14 @@
       "port": 853,
       "secret": "ee695c0e4188358e4ebb6d7a489185f6a96d742e6772616d2e796f75",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -3219,16 +3397,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 437.79,
+      "last_rtt_ms": 373.41,
       "rtt_samples": [
         434.43,
-        437.79
+        437.79,
+        373.41
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3268,16 +3448,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 586.13,
+      "last_rtt_ms": 555.63,
       "rtt_samples": [
         403.77,
-        586.13
+        586.13,
+        555.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3294,16 +3476,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 485.58,
+      "last_rtt_ms": 464.99,
       "rtt_samples": [
         404.72,
-        485.58
+        485.58,
+        464.99
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3320,16 +3504,18 @@
       "port": 2053,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 446.81,
+      "last_rtt_ms": 378.75,
       "rtt_samples": [
         442.18,
-        446.81
+        446.81,
+        378.75
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3346,16 +3532,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 427.2,
+      "last_rtt_ms": 361.98,
       "rtt_samples": [
         488.19,
-        427.2
+        427.2,
+        361.98
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3395,16 +3583,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 420.28,
+      "last_rtt_ms": 377.63,
       "rtt_samples": [
         430.9,
-        420.28
+        420.28,
+        377.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3441,16 +3631,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 427.15,
+      "last_rtt_ms": 370.42,
       "rtt_samples": [
         437.97,
-        427.15
+        427.15,
+        370.42
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3467,16 +3659,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 509.3,
+      "last_rtt_ms": 482.17,
       "rtt_samples": [
         700.3,
-        509.3
+        509.3,
+        482.17
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3493,20 +3687,21 @@
       "port": 88,
       "secret": "7nnnAQIAAQAH8AMDhuJMOt0",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
       "sources": [
         "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt"
       ],
-      "last_error": "CONNECT_TIMEOUT"
+      "last_error": "NETWORK_ERROR"
     },
     "idiot.foltmeingop.co.uk:8880": {
       "url": "tg://proxy?server=idiot.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ",
@@ -3514,16 +3709,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 450.68,
+      "last_rtt_ms": 390.03,
       "rtt_samples": [
         591.72,
-        450.68
+        450.68,
+        390.03
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3540,16 +3737,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 532.39,
+      "last_rtt_ms": 504.83,
       "rtt_samples": [
         493.86,
-        532.39
+        532.39,
+        504.83
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3589,16 +3788,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 544.76,
+      "last_rtt_ms": 571.08,
       "rtt_samples": [
         573.07,
-        544.76
+        544.76,
+        571.08
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3615,7 +3816,7 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
       "fail_count": 0,
@@ -3632,16 +3833,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 546.33,
+      "last_rtt_ms": 5493.14,
       "rtt_samples": [
         488.97,
-        546.33
+        546.33,
+        5493.14
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3658,16 +3861,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 497.25,
+      "last_rtt_ms": 518.25,
       "rtt_samples": [
         499.41,
-        497.25
+        497.25,
+        518.25
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3684,16 +3889,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 508.87,
+      "last_rtt_ms": 5441.74,
       "rtt_samples": [
         472.41,
-        508.87
+        508.87,
+        5441.74
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3733,16 +3940,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 533.16,
+      "last_rtt_ms": 495.62,
       "rtt_samples": [
         533.37,
-        533.16
+        533.16,
+        495.62
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3782,7 +3991,7 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
       "fail_count": 0,
@@ -3799,16 +4008,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 406.72,
+      "last_rtt_ms": 433.41,
       "rtt_samples": [
         317.2,
-        406.72
+        406.72,
+        433.41
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3825,16 +4036,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 507.97,
+      "last_rtt_ms": 505.19,
       "rtt_samples": [
         499.11,
-        507.97
+        507.97,
+        505.19
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3851,16 +4064,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 516.16,
+      "last_rtt_ms": 555.08,
       "rtt_samples": [
         4154.21,
-        516.16
+        516.16,
+        555.08
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3877,16 +4092,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 556.04,
+      "last_rtt_ms": 549.37,
       "rtt_samples": [
         595.83,
-        556.04
+        556.04,
+        549.37
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3903,13 +4120,14 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -3924,16 +4142,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 479.8,
+      "last_rtt_ms": 490.62,
       "rtt_samples": [
         425.36,
-        479.8
+        479.8,
+        490.62
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3950,16 +4170,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 483.69,
+      "last_rtt_ms": 457.64,
       "rtt_samples": [
         469.16,
-        483.69
+        483.69,
+        457.64
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -3999,16 +4221,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 550.22,
+      "last_rtt_ms": 524.13,
       "rtt_samples": [
         664.22,
-        550.22
+        550.22,
+        524.13
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4048,16 +4272,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 508.17,
+      "last_rtt_ms": 554.15,
       "rtt_samples": [
         407.39,
-        508.17
+        508.17,
+        554.15
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4074,16 +4300,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 592.68,
+      "last_rtt_ms": 476.69,
       "rtt_samples": [
         500.23,
-        592.68
+        592.68,
+        476.69
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4123,16 +4351,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 505.14,
+      "last_rtt_ms": 450.94,
       "rtt_samples": [
         493.04,
-        505.14
+        505.14,
+        450.94
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4149,16 +4379,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 520.6,
+      "last_rtt_ms": 511.3,
       "rtt_samples": [
         479.68,
-        520.6
+        520.6,
+        511.3
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4175,16 +4407,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 460.38,
+      "last_rtt_ms": 389.21,
       "rtt_samples": [
         437.94,
-        460.38
+        460.38,
+        389.21
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4201,16 +4435,18 @@
       "port": 2053,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 427.71,
+      "last_rtt_ms": 403.63,
       "rtt_samples": [
         438.34,
-        427.71
+        427.71,
+        403.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4227,16 +4463,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 420.91,
+      "last_rtt_ms": 381.91,
       "rtt_samples": [
         444.15,
-        420.91
+        420.91,
+        381.91
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4253,16 +4491,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 566.5,
+      "last_rtt_ms": 537.72,
       "rtt_samples": [
         514.53,
-        566.5
+        566.5,
+        537.72
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4278,16 +4518,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 579.68,
+      "last_rtt_ms": 534.03,
       "rtt_samples": [
         537.24,
-        579.68
+        579.68,
+        534.03
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4327,16 +4569,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 463.92,
+      "last_rtt_ms": 529.64,
       "rtt_samples": [
         435.01,
-        463.92
+        463.92,
+        529.64
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4375,16 +4619,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 523.88,
+      "last_rtt_ms": 466.38,
       "rtt_samples": [
         523.07,
-        523.88
+        523.88,
+        466.38
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4401,16 +4647,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 464.21,
+      "last_rtt_ms": 382.52,
       "rtt_samples": [
         441.95,
-        464.21
+        464.21,
+        382.52
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4426,16 +4674,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 548.59,
+      "last_rtt_ms": 507.47,
       "rtt_samples": [
         536.87,
-        548.59
+        548.59,
+        507.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4451,16 +4701,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 497.06,
+      "last_rtt_ms": 348.96,
       "rtt_samples": [
         415.15,
-        497.06
+        497.06,
+        348.96
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4476,16 +4728,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 504.61,
+      "last_rtt_ms": 446.71,
       "rtt_samples": [
         407.67,
-        504.61
+        504.61,
+        446.71
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4502,7 +4756,7 @@
       "port": 443,
       "secret": "ee3f72634c46d320aaa30d8bb2682e9b497975672d6c696e6b2e7275",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
       "fail_count": 0,
@@ -4565,16 +4819,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 567.21,
+      "last_rtt_ms": 384.32,
       "rtt_samples": [
         461.41,
-        567.21
+        567.21,
+        384.32
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4591,16 +4847,18 @@
       "port": 443,
       "secret": "ee67af30bbe3543b32fd7b6966a61417e26c74652e6d69736875746b696e2e636c69636b",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 625.65,
+      "last_rtt_ms": 556.63,
       "rtt_samples": [
         692.15,
-        625.65
+        625.65,
+        556.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4617,16 +4875,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 471.2,
+      "last_rtt_ms": 403.1,
       "rtt_samples": [
         435.73,
-        471.2
+        471.2,
+        403.1
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4666,16 +4926,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 445.94,
+      "last_rtt_ms": 363.15,
       "rtt_samples": [
         429.93,
-        445.94
+        445.94,
+        363.15
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4692,16 +4954,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 475.29,
+      "last_rtt_ms": 394.6,
       "rtt_samples": [
         400.24,
-        475.29
+        475.29,
+        394.6
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4718,16 +4982,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 442.33,
+      "last_rtt_ms": 388.83,
       "rtt_samples": [
         430.69,
-        442.33
+        442.33,
+        388.83
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4744,16 +5010,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 545.5,
+      "last_rtt_ms": 359.2,
       "rtt_samples": [
         403.24,
-        545.5
+        545.5,
+        359.2
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4770,16 +5038,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 403.13,
+      "last_rtt_ms": 372.14,
       "rtt_samples": [
         413.19,
-        403.13
+        403.13,
+        372.14
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4819,16 +5089,18 @@
       "port": 8443,
       "secret": "104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 495.0,
+      "last_rtt_ms": 460.66,
       "rtt_samples": [
         413.76,
-        495.0
+        495.0,
+        460.66
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4845,16 +5117,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 477.33,
+      "last_rtt_ms": 423.66,
       "rtt_samples": [
         434.13,
-        477.33
+        477.33,
+        423.66
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4870,16 +5144,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 433.77,
+      "last_rtt_ms": 350.07,
       "rtt_samples": [
         437.51,
-        433.77
+        433.77,
+        350.07
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4896,16 +5172,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 631.13,
+      "last_rtt_ms": 578.55,
       "rtt_samples": [
         605.04,
-        631.13
+        631.13,
+        578.55
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -4988,16 +5266,17 @@
       "port": 443,
       "secret": "eed052c02f3e13fa55568670fa5df149086d6f62696c652e6d69736875746b696e2e636c69636b",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": "2026-10-09T05:53:46.483949+00:00",
       "ok_count": 1,
-      "fail_count": 1,
+      "fail_count": 2,
       "last_rtt_ms": 696.49,
       "rtt_samples": [
         696.49
       ],
       "recent": [
         true,
+        false,
         false
       ],
       "sources": [
@@ -5012,16 +5291,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 547.39,
+      "last_rtt_ms": 477.47,
       "rtt_samples": [
         533.12,
-        547.39
+        547.39,
+        477.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5038,13 +5319,14 @@
       "port": 853,
       "secret": "ee608f40eb7d1aad1fbc6405c5ed2669616d742e6d7470726f78796772616d2e6f6e6c696e65",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -5059,16 +5341,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMjdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 521.84,
+      "last_rtt_ms": 435.21,
       "rtt_samples": [
         433.44,
-        521.84
+        521.84,
+        435.21
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5085,16 +5369,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 848.71,
+      "last_rtt_ms": 806.94,
       "rtt_samples": [
         855.49,
-        848.71
+        848.71,
+        806.94
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5110,16 +5396,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 683.93,
+      "last_rtt_ms": 347.41,
       "rtt_samples": [
         405.17,
-        683.93
+        683.93,
+        347.41
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5136,16 +5424,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 426.82,
+      "last_rtt_ms": 374.01,
       "rtt_samples": [
         423.93,
-        426.82
+        426.82,
+        374.01
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5162,16 +5452,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 955.62,
+      "last_rtt_ms": 1448.79,
       "rtt_samples": [
         1883.38,
-        955.62
+        955.62,
+        1448.79
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5188,16 +5480,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 652.71,
+      "last_rtt_ms": 435.32,
       "rtt_samples": [
         457.55,
-        652.71
+        652.71,
+        435.32
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5213,16 +5507,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 473.84,
+      "last_rtt_ms": 404.48,
       "rtt_samples": [
         457.22,
-        473.84
+        473.84,
+        404.48
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5239,13 +5535,14 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": null,
       "ok_count": 0,
-      "fail_count": 2,
+      "fail_count": 3,
       "last_rtt_ms": null,
       "rtt_samples": [],
       "recent": [
+        false,
         false,
         false
       ],
@@ -5306,10 +5603,10 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
       "last_ok": "2026-10-09T06:03:15.138824+00:00",
       "ok_count": 2,
-      "fail_count": 0,
+      "fail_count": 1,
       "last_rtt_ms": 513.43,
       "rtt_samples": [
         560.72,
@@ -5317,14 +5614,15 @@
       ],
       "recent": [
         true,
-        true
+        true,
+        false
       ],
       "sources": [
         "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt",
         "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt"
       ],
       "last_engine": "library",
-      "last_error": null
+      "last_error": "NETWORK_ERROR"
     },
     "noh.anotelinopalk.co.uk:8880": {
       "url": "tg://proxy?server=noh.anotelinopalk.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ",
@@ -5332,16 +5630,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 416.31,
+      "last_rtt_ms": 360.04,
       "rtt_samples": [
         440.78,
-        416.31
+        416.31,
+        360.04
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5358,16 +5658,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 425.39,
+      "last_rtt_ms": 353.33,
       "rtt_samples": [
         444.43,
-        425.39
+        425.39,
+        353.33
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5384,16 +5686,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 529.65,
+      "last_rtt_ms": 468.56,
       "rtt_samples": [
         526.91,
-        529.65
+        529.65,
+        468.56
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5410,16 +5714,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 554.84,
+      "last_rtt_ms": 378.35,
       "rtt_samples": [
         417.17,
-        554.84
+        554.84,
+        378.35
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5458,16 +5764,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 458.88,
+      "last_rtt_ms": 400.03,
       "rtt_samples": [
         607.85,
-        458.88
+        458.88,
+        400.03
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5483,16 +5791,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 428.4,
+      "last_rtt_ms": 373.96,
       "rtt_samples": [
         465.48,
-        428.4
+        428.4,
+        373.96
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5529,16 +5839,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 521.62,
+      "last_rtt_ms": 472.88,
       "rtt_samples": [
         538.33,
-        521.62
+        521.62,
+        472.88
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5555,16 +5867,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 558.05,
+      "last_rtt_ms": 1129.06,
       "rtt_samples": [
         559.0,
-        558.05
+        558.05,
+        1129.06
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5580,16 +5894,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 488.28,
+      "last_rtt_ms": 365.85,
       "rtt_samples": [
         427.39,
-        488.28
+        488.28,
+        365.85
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5606,16 +5922,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 410.54,
+      "last_rtt_ms": 373.48,
       "rtt_samples": [
         397.52,
-        410.54
+        410.54,
+        373.48
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5632,16 +5950,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 537.34,
+      "last_rtt_ms": 464.2,
       "rtt_samples": [
         513.62,
-        537.34
+        537.34,
+        464.2
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5658,16 +5978,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 456.49,
+      "last_rtt_ms": 427.15,
       "rtt_samples": [
         481.43,
-        456.49
+        456.49,
+        427.15
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5684,16 +6006,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 624.95,
+      "last_rtt_ms": 5403.64,
       "rtt_samples": [
         416.18,
-        624.95
+        624.95,
+        5403.64
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5710,16 +6034,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 399.69,
+      "last_rtt_ms": 366.64,
       "rtt_samples": [
         455.58,
-        399.69
+        399.69,
+        366.64
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5735,16 +6061,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 458.24,
+      "last_rtt_ms": 401.52,
       "rtt_samples": [
         430.58,
-        458.24
+        458.24,
+        401.52
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5761,16 +6089,18 @@
       "port": 22,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 452.12,
+      "last_rtt_ms": 364.95,
       "rtt_samples": [
         439.84,
-        452.12
+        452.12,
+        364.95
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5787,16 +6117,18 @@
       "port": 7443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 288.73,
+      "last_rtt_ms": 217.97,
       "rtt_samples": [
         237.89,
-        288.73
+        288.73,
+        217.97
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5835,16 +6167,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 491.82,
+      "last_rtt_ms": 360.29,
       "rtt_samples": [
         470.02,
-        491.82
+        491.82,
+        360.29
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5884,16 +6218,18 @@
       "port": 443,
       "secret": "eeabb5c5430f2510e43863f9b6284f97b37265626f726e2e72656269727468636f6e6e6563742e636f6d",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 650.56,
+      "last_rtt_ms": 625.3,
       "rtt_samples": [
         765.58,
-        650.56
+        650.56,
+        625.3
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5910,16 +6246,18 @@
       "port": 7799,
       "secret": "dd10400103324995b07c030386e886e7f1",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 475.44,
+      "last_rtt_ms": 409.47,
       "rtt_samples": [
         447.01,
-        475.44
+        475.44,
+        409.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5936,16 +6274,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 485.91,
+      "last_rtt_ms": 422.94,
       "rtt_samples": [
         492.19,
-        485.91
+        485.91,
+        422.94
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5962,16 +6302,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 449.27,
+      "last_rtt_ms": 345.43,
       "rtt_samples": [
         436.9,
-        449.27
+        449.27,
+        345.43
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -5988,16 +6330,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 483.3,
+      "last_rtt_ms": 398.63,
       "rtt_samples": [
         403.59,
-        483.3
+        483.3,
+        398.63
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6013,16 +6357,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 595.08,
+      "last_rtt_ms": 521.1,
       "rtt_samples": [
         562.29,
-        595.08
+        595.08,
+        521.1
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6038,16 +6384,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 479.98,
+      "last_rtt_ms": 551.28,
       "rtt_samples": [
         575.38,
-        479.98
+        479.98,
+        551.28
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6064,16 +6412,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 429.81,
+      "last_rtt_ms": 530.18,
       "rtt_samples": [
         435.41,
-        429.81
+        429.81,
+        530.18
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6090,16 +6440,18 @@
       "port": 2053,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 410.99,
+      "last_rtt_ms": 359.89,
       "rtt_samples": [
         444.84,
-        410.99
+        410.99,
+        359.89
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6133,16 +6485,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 500.78,
+      "last_rtt_ms": 440.87,
       "rtt_samples": [
         432.38,
-        500.78
+        500.78,
+        440.87
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6159,16 +6513,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 499.43,
+      "last_rtt_ms": 449.43,
       "rtt_samples": [
         437.31,
-        499.43
+        499.43,
+        449.43
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6185,16 +6541,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 680.28,
+      "last_rtt_ms": 487.97,
       "rtt_samples": [
         525.69,
-        680.28
+        680.28,
+        487.97
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6210,16 +6568,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 465.69,
+      "last_rtt_ms": 1487.76,
       "rtt_samples": [
         446.12,
-        465.69
+        465.69,
+        1487.76
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6235,16 +6595,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 489.78,
+      "last_rtt_ms": 5353.62,
       "rtt_samples": [
         428.77,
-        489.78
+        489.78,
+        5353.62
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6284,16 +6646,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 399.26,
+      "last_rtt_ms": 362.45,
       "rtt_samples": [
         422.95,
-        399.26
+        399.26,
+        362.45
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6310,16 +6674,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 456.16,
+      "last_rtt_ms": 404.42,
       "rtt_samples": [
         445.65,
-        456.16
+        456.16,
+        404.42
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6335,16 +6701,18 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 433.82,
+      "last_rtt_ms": 358.99,
       "rtt_samples": [
         463.41,
-        433.82
+        433.82,
+        358.99
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6361,16 +6729,18 @@
       "port": 8443,
       "secret": "104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 462.33,
+      "last_rtt_ms": 401.72,
       "rtt_samples": [
         437.46,
-        462.33
+        462.33,
+        401.72
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6386,16 +6756,18 @@
       "port": 7799,
       "secret": "dd10400103324995b07c030386e886e7f1",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 548.97,
+      "last_rtt_ms": 505.18,
       "rtt_samples": [
         564.06,
-        548.97
+        548.97,
+        505.18
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6412,16 +6784,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 401.26,
+      "last_rtt_ms": 381.36,
       "rtt_samples": [
         420.7,
-        401.26
+        401.26,
+        381.36
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6438,16 +6812,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 434.64,
+      "last_rtt_ms": 357.29,
       "rtt_samples": [
         440.15,
-        434.64
+        434.64,
+        357.29
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6464,16 +6840,18 @@
       "port": 2053,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 427.02,
+      "last_rtt_ms": 404.77,
       "rtt_samples": [
         436.47,
-        427.02
+        427.02,
+        404.77
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6490,16 +6868,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 426.54,
+      "last_rtt_ms": 389.65,
       "rtt_samples": [
         436.18,
-        426.54
+        426.54,
+        389.65
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6516,16 +6896,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 483.67,
+      "last_rtt_ms": 488.4,
       "rtt_samples": [
         425.95,
-        483.67
+        483.67,
+        488.4
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6542,16 +6924,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 1545.3,
+      "last_rtt_ms": 2040.61,
       "rtt_samples": [
         822.22,
-        1545.3
+        1545.3,
+        2040.61
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6567,16 +6951,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 445.7,
+      "last_rtt_ms": 448.05,
       "rtt_samples": [
         445.37,
-        445.7
+        445.7,
+        448.05
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6593,16 +6979,18 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 590.84,
+      "last_rtt_ms": 532.49,
       "rtt_samples": [
         598.05,
-        590.84
+        590.84,
+        532.49
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6619,16 +7007,18 @@
       "port": 22,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 269.62,
+      "last_rtt_ms": 222.22,
       "rtt_samples": [
         296.91,
-        269.62
+        269.62,
+        222.22
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6645,16 +7035,18 @@
       "port": 22,
       "secret": "dd79e344818749bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 336.98,
+      "last_rtt_ms": 265.78,
       "rtt_samples": [
         440.56,
-        336.98
+        336.98,
+        265.78
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6671,16 +7063,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 421.47,
+      "last_rtt_ms": 373.78,
       "rtt_samples": [
         426.68,
-        421.47
+        421.47,
+        373.78
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6743,16 +7137,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 694.9,
+      "last_rtt_ms": 661.31,
       "rtt_samples": [
         527.23,
-        694.9
+        694.9,
+        661.31
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6769,16 +7165,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 438.64,
+      "last_rtt_ms": 365.76,
       "rtt_samples": [
         481.41,
-        438.64
+        438.64,
+        365.76
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6794,16 +7192,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 818.01,
+      "last_rtt_ms": 649.84,
       "rtt_samples": [
         864.15,
-        818.01
+        818.01,
+        649.84
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6820,16 +7220,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 552.48,
+      "last_rtt_ms": 491.51,
       "rtt_samples": [
         512.45,
-        552.48
+        552.48,
+        491.51
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6869,20 +7271,24 @@
       "port": 1437,
       "secret": "7tZ9Uiy1D5OKRbkArbZfy_90Z3Byb3h5LmFsbmlkb2sucnU",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": null,
-      "ok_count": 0,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 1,
       "fail_count": 2,
-      "last_rtt_ms": null,
-      "rtt_samples": [],
+      "last_rtt_ms": 992.15,
+      "rtt_samples": [
+        992.15
+      ],
       "recent": [
         false,
-        false
+        false,
+        true
       ],
       "sources": [
         "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt"
       ],
-      "last_error": "CONNECT_TIMEOUT"
+      "last_error": null,
+      "last_engine": "library"
     },
     "torobchesho.co.uk:443": {
       "url": "tg://proxy?server=torobchesho.co.uk&port=443&secret=ee5f7ce28a2c4816c6c923dfd4d5630e01746f726f6263686573686f2e636f2e756b",
@@ -6913,16 +7319,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 471.15,
+      "last_rtt_ms": 615.79,
       "rtt_samples": [
         442.37,
-        471.15
+        471.15,
+        615.79
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6938,16 +7346,18 @@
       "port": 7799,
       "secret": "dd10400103324995b07c030386e886e7f1",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 449.57,
+      "last_rtt_ms": 393.27,
       "rtt_samples": [
         3959.58,
-        449.57
+        449.57,
+        393.27
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6964,16 +7374,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 546.23,
+      "last_rtt_ms": 490.27,
       "rtt_samples": [
         540.66,
-        546.23
+        546.23,
+        490.27
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -6990,16 +7402,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 440.46,
+      "last_rtt_ms": 365.5,
       "rtt_samples": [
         432.2,
-        440.46
+        440.46,
+        365.5
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7015,16 +7429,18 @@
       "port": 8443,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 495.44,
+      "last_rtt_ms": 791.22,
       "rtt_samples": [
         472.9,
-        495.44
+        495.44,
+        791.22
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7041,16 +7457,18 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 448.79,
+      "last_rtt_ms": 413.52,
       "rtt_samples": [
         436.03,
-        448.79
+        448.79,
+        413.52
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7067,16 +7485,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 467.11,
+      "last_rtt_ms": 370.02,
       "rtt_samples": [
         423.19,
-        467.11
+        467.11,
+        370.02
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7093,16 +7513,18 @@
       "port": 2096,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 443.34,
+      "last_rtt_ms": 397.86,
       "rtt_samples": [
         431.83,
-        443.34
+        443.34,
+        397.86
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7119,16 +7541,18 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 494.0,
+      "last_rtt_ms": 403.47,
       "rtt_samples": [
         3639.16,
-        494.0
+        494.0,
+        403.47
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7168,16 +7592,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 414.17,
+      "last_rtt_ms": 366.45,
       "rtt_samples": [
         459.58,
-        414.17
+        414.17,
+        366.45
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7217,16 +7643,18 @@
       "port": 8880,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 446.62,
+      "last_rtt_ms": 501.0,
       "rtt_samples": [
         423.32,
-        446.62
+        446.62,
+        501.0
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7243,16 +7671,18 @@
       "port": 8443,
       "secret": "1603010200010001fc030386e24c3add",
       "first_seen": "2026-10-09T05:53:46.483949+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 2,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 3,
       "fail_count": 0,
-      "last_rtt_ms": 526.28,
+      "last_rtt_ms": 454.02,
       "rtt_samples": [
         424.67,
-        526.28
+        526.28,
+        454.02
       ],
       "recent": [
+        true,
         true,
         true
       ],
@@ -7291,15 +7721,17 @@
       "port": 7443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 579.72,
+      "last_rtt_ms": 548.15,
       "rtt_samples": [
-        579.72
+        579.72,
+        548.15
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7314,15 +7746,17 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 518.91,
+      "last_rtt_ms": 501.14,
       "rtt_samples": [
-        518.91
+        518.91,
+        501.14
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7337,15 +7771,17 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 497.59,
+      "last_rtt_ms": 470.22,
       "rtt_samples": [
-        497.59
+        497.59,
+        470.22
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7360,15 +7796,17 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 505.92,
+      "last_rtt_ms": 466.63,
       "rtt_samples": [
-        505.92
+        505.92,
+        466.63
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7383,15 +7821,17 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 499.87,
+      "last_rtt_ms": 475.41,
       "rtt_samples": [
-        499.87
+        499.87,
+        475.41
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7406,15 +7846,17 @@
       "port": 8443,
       "secret": "eeNEgYdJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 609.66,
+      "last_rtt_ms": 404.1,
       "rtt_samples": [
-        609.66
+        609.66,
+        404.1
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7429,15 +7871,17 @@
       "port": 4455,
       "secret": "dd104462821249bd7ac519130220c25d09",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 488.79,
+      "last_rtt_ms": 875.31,
       "rtt_samples": [
-        488.79
+        488.79,
+        875.31
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7452,15 +7896,17 @@
       "port": 8443,
       "secret": "EERighJJvXrFGRMCIMJdCQ",
       "first_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_seen": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
-      "ok_count": 1,
+      "last_seen": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
+      "ok_count": 2,
       "fail_count": 0,
-      "last_rtt_ms": 496.23,
+      "last_rtt_ms": 487.15,
       "rtt_samples": [
-        496.23
+        496.23,
+        487.15
       ],
       "recent": [
+        true,
         true
       ],
       "sources": [
@@ -7470,33 +7916,33 @@
       "last_error": null
     }
   },
-  "updated_at": "2026-10-09T06:03:15.138824+00:00",
+  "updated_at": "2026-10-09T06:05:52.691562+00:00",
   "sources": {
     "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt": {
       "kind": "list",
-      "runs": 2,
-      "last_run": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
+      "runs": 3,
+      "last_run": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
       "last_error": null,
       "last_links_found": 171,
       "last_links_accepted": 171,
       "last_new_endpoints": 171,
-      "total_new_endpoints": 342,
-      "total_links_accepted": 342,
-      "ok_runs": 2
+      "total_new_endpoints": 513,
+      "total_links_accepted": 513,
+      "ok_runs": 3
     },
     "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt": {
       "kind": "list",
-      "runs": 2,
-      "last_run": "2026-10-09T06:03:15.138824+00:00",
-      "last_ok": "2026-10-09T06:03:15.138824+00:00",
+      "runs": 3,
+      "last_run": "2026-10-09T06:05:52.691562+00:00",
+      "last_ok": "2026-10-09T06:05:52.691562+00:00",
       "last_error": null,
       "last_links_found": 203,
       "last_links_accepted": 203,
       "last_new_endpoints": 63,
-      "total_new_endpoints": 187,
-      "total_links_accepted": 455,
-      "ok_runs": 2
+      "total_new_endpoints": 250,
+      "total_links_accepted": 658,
+      "ok_runs": 3
     }
   },
   "dns": {
@@ -9900,7 +10346,7 @@
     }
   },
   "meta": {
-    "last_working_count": 216,
-    "last_published_at": "2026-10-09T06:03:15.138824+00:00"
+    "last_working_count": 213,
+    "last_published_at": "2026-10-09T06:05:52.691562+00:00"
   }
 }
