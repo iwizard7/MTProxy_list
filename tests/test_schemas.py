@@ -24,6 +24,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import adcheck  # noqa: E402
 import collector  # noqa: E402
+import publish  # noqa: E402
 
 LINK_A = "tg://proxy?server=1.2.3.4&port=443&secret=" + "ab" * 16
 LINK_B = "tg://proxy?server=5.6.7.8&port=443&secret=" + "cd" * 16
@@ -138,7 +139,13 @@ class ValidatorSelfTests(unittest.TestCase):
 
 class SchemaFileTests(unittest.TestCase):
     def test_schema_files_are_valid_json_draft7(self):
-        for name in ("stats.schema.json", "endpoints.schema.json", "ads.schema.json", "badge.schema.json"):
+        for name in (
+            "stats.schema.json",
+            "endpoints.schema.json",
+            "ads.schema.json",
+            "badge.schema.json",
+            "manifest.schema.json",
+        ):
             schema = load_schema(name)
             self.assertEqual(schema["$schema"], "http://json-schema.org/draft-07/schema#", name)
             self.assertEqual(schema["type"], "object", name)
@@ -208,6 +215,16 @@ class PublishedOutputTests(unittest.TestCase):
         badge = json.loads(self.paths["BADGE_FILE"].read_text())
         errors = validate(badge, load_schema("badge.schema.json"))
         self.assertEqual(errors, [], "\n".join(errors))
+
+    def test_pages_manifest_matches_schema(self):
+        self._run_collector()
+        site = self.dir / "site"
+        manifest = publish.build_site(
+            self.dir, site, commit="c" * 40, data_commit="d" * 40, generated_at=None
+        )
+        errors = validate(manifest, load_schema("manifest.schema.json"))
+        self.assertEqual(errors, [], "\n".join(errors))
+        self.assertEqual(manifest["data_commit"], "d" * 40)
 
     def test_ads_matches_schema(self):
         adcheck.save_ads(

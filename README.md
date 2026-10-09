@@ -22,7 +22,7 @@ from **GitHub Pages** (a stable, CDN-backed URL):
 | [`endpoints.json`](https://iwizard7.github.io/MTProxy_list/endpoints.json) | per-endpoint metadata: verification, `rtt_ms`, `check_ms`, `median_rtt_ms`, `success_rate`, `rtt_trend`, engine, last error, ads status, upstream metadata. |
 | [`stats.json`](https://iwizard7.github.io/MTProxy_list/stats.json) | run statistics: source health, rejected links, publish guard, DNS cache, thresholds. |
 | [`badge.json`](https://iwizard7.github.io/MTProxy_list/badge.json) | [shields.io endpoint badge](https://shields.io/badges/endpoint-badge) with the current verified count (rendered above). |
-| [`manifest.json`](https://iwizard7.github.io/MTProxy_list/manifest.json) | machine-readable index: sizes, line counts and sha256 of every published file. |
+| [`manifest.json`](https://iwizard7.github.io/MTProxy_list/manifest.json) | machine-readable index: sizes, line counts, sha256 of every published file, plus the code and data revisions that produced them. |
 | [`ads.json`](https://iwizard7.github.io/MTProxy_list/ads.json) | optional promoted-channel results produced by `src/adcheck.py`. |
 | [`index.html`](https://iwizard7.github.io/MTProxy_list/) | human-readable page with counts, usage and caveats. |
 

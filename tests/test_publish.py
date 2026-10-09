@@ -123,11 +123,41 @@ class BuildSiteTests(unittest.TestCase):
         manifest = publish.build_site(self.data, self.site, commit="abcdef1234567890", generated_at=NOW)
         self.assertEqual(manifest["commit"], "abcdef1234567890")
         page = (self.site / "index.html").read_text(encoding="utf-8")
+        self.assertIn("code revision", page)
         self.assertIn("abcdef123456", page)
 
         with mock.patch.dict("os.environ", {"GITHUB_SHA": "deadbeefcafe1234"}):
             manifest = publish.build_site(self.data, self.site, generated_at=NOW)
         self.assertEqual(manifest["commit"], "deadbeefcafe1234")
+
+    def test_data_commit_is_reported_separately(self):
+        # commit = code revision, data_commit = data branch revision: consumers
+        # need the second one to pin an exact dataset.
+        manifest = publish.build_site(
+            self.data,
+            self.site,
+            commit="coderev0000000000",
+            data_commit="datarev1111111111",
+            generated_at=NOW,
+        )
+        self.assertEqual(manifest["commit"], "coderev0000000000")
+        self.assertEqual(manifest["data_commit"], "datarev1111111111")
+        page = (self.site / "index.html").read_text(encoding="utf-8")
+        self.assertIn("data revision", page)
+        self.assertIn("datarev11111", page)
+        self.assertIn("code revision", page)
+
+        with mock.patch.dict("os.environ", {"DATA_COMMIT": "envrev2222222222"}):
+            manifest = publish.build_site(self.data, self.site, generated_at=NOW)
+        self.assertEqual(manifest["data_commit"], "envrev2222222222")
+
+    def test_data_commit_is_null_when_unknown(self):
+        manifest = publish.build_site(
+            self.data, self.site, commit=None, data_commit=None, generated_at=NOW
+        )
+        with mock.patch.dict("os.environ", {"GITHUB_SHA": "", "DATA_COMMIT": ""}):
+            manifest = publish.build_site(self.data, self.site, generated_at=NOW)
+        self.assertIsNone(manifest["data_commit"])
 
     def test_missing_optional_files_are_skipped(self):
         (self.data / "ads.json").unlink()

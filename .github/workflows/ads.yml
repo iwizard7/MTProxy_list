@@ -111,7 +111,13 @@ jobs:
           git -C .data rebase origin/data || true
           git -C .data push origin HEAD:data
 
+      - name: Resolve data revision
+        id: data
+        run: echo "sha=$(git -C .data rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Build Pages site
+        env:
+          DATA_COMMIT: ${{ steps.data.outputs.sha }}
         run: |
           python -m src.publish \
             --data-dir "$DATA_DIR" \

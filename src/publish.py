@@ -79,6 +79,7 @@ def build_manifest(
     stats: dict,
     generated_at: datetime,
     commit: str | None,
+    data_commit: str | None = None,
 ) -> dict:
     files = {}
     for name, _content_type, _description, size, lines, digest in copied:
@@ -88,7 +89,10 @@ def build_manifest(
         files[name] = entry
     return {
         "generated_at": generated_at.isoformat(),
+        # commit = the code revision that produced the data (GITHUB_SHA);
+        # data_commit = the revision of the data branch holding these files.
         "commit": commit,
+        "data_commit": data_commit,
         "source": "https://github.com/iwizard7/MTProxy_list",
         "data_branch": "data",
         "counts": {
@@ -121,6 +125,7 @@ def render_index(
     generated_at: datetime,
     commit: str | None,
     site_url: str,
+    data_commit: str | None = None,
 ) -> str:
     verified = stats.get("mtproto_verified")
     stable = stats.get("stable_in_window")
@@ -128,7 +133,6 @@ def render_index(
     updated = stats.get("updated_at") or generated_at.isoformat()
     sources_ok = stats.get("sources_ok")
     sources_total = stats.get("sources_total")
-    ads_note = ""
 
     rows = []
     for name, description, size, lines in table:
@@ -143,10 +147,13 @@ def render_index(
             "</tr>"
         )
 
+    revisions = []
+    if data_commit:
+        revisions.append(f"data revision <code>{html.escape(data_commit[:12])}</code>")
+    if commit:
+        revisions.append(f"code revision <code>{html.escape(commit[:12])}</code>")
     commit_line = (
-        f'<p class="meta">Data commit <code>{html.escape(commit[:12])}</code></p>'
-        if commit
-        else ""
+        f'<p class="meta">{" · ".join(revisions)}</p>' if revisions else ""
     )
 
     return f"""<!DOCTYPE html>
@@ -267,11 +274,13 @@ def build_site(
     site_dir: Path = DEFAULT_SITE_DIR,
     site_url: str = "https://iwizard7.github.io/MTProxy_list",
     commit: str | None = None,
+    data_commit: str | None = None,
     generated_at: datetime | None = None,
 ) -> dict:
     """Copy the published data into ``site_dir`` and write index + manifest."""
     generated_at = generated_at or datetime.now(timezone.utc)
-    commit = commit or os.environ.get("GITHUB_SHA")
+    commit = commit or os.environ.get("GITHUB_SHA") or None
+    data_commit = data_commit or os.environ.get("DATA_COMMIT") or None
 
     site_dir.mkdir(parents=True, exist_ok=True)
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
@@ -294,11 +303,15 @@ def build_site(
         stats = {}
 
     (site_dir / "index.html").write_text(
-        render_index(stats, table, generated_at, commit, site_url.rstrip("/")),
+        render_index(
+            stats, table, generated_at, commit, site_url.rstrip("/"), data_commit
+        ),
         encoding="utf-8",
     )
 
-    manifest = build_manifest(data_dir, site_dir, copied, stats, generated_at, commit)
+    manifest = build_manifest(
+        data_dir, site_dir, copied, stats, generated_at, commit, data_commit
+    )
     (site_dir / "manifest.json").write_text(
         json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
@@ -322,6 +335,11 @@ def build_parser() -> argparse.ArgumentParser:
         default=os.environ.get("SITE_URL", "https://iwizard7.github.io/MTProxy_list"),
         help="public base URL used in the generated page",
     )
+    parser.add_argument(
+        "--data-commit",
+        default=os.environ.get("DATA_COMMIT"),
+        help="revision of the data branch holding these files (default: DATA_COMMIT)",
+    )
     return parser
 
 
@@ -334,7 +352,9 @@ def main(argv: list[str] | None = None) -> int:
         print(f"Data directory not found: {data_dir}", file=sys.stderr)
         return 3
 
-    manifest = build_site(data_dir, site_dir, site_url=args.site_url)
+    manifest = build_site(
+        data_dir, site_dir, site_url=args.site_url, data_commit=args.data_commit
+    )
     files = ", ".join(manifest["files"]) or "(no data files found)"
     print(f"Site written to {site_dir}: index.html, manifest.json, {files}")
     counts = manifest["counts"]
@@ -342,6 +362,8 @@ def main(argv: list[str] | None = None) -> int:
         f"Counts: verified={counts['verified']} stable={counts['stable_in_window']} "
         f"discovered={counts['discovered']}"
     )
+    if manifest.get("data_commit"):
+        print(f"Data revision: {manifest['data_commit'][:12]}")
     return 0
 
 

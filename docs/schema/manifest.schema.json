@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/iwizard7/MTProxy_list/docs/schema/manifest.schema.json",
+  "title": "manifest.json (GitHub Pages)",
+  "description": "Machine-readable index of the published data files. Validated by tests/test_schemas.py.",
+  "type": "object",
+  "required": ["generated_at", "commit", "data_commit", "counts", "files"],
+  "properties": {
+    "generated_at": {"type": "string", "description": "when the site was built"},
+    "commit": {
+      "type": ["string", "null"],
+      "description": "code revision that produced the data (GITHUB_SHA); null outside CI"
+    },
+    "data_commit": {
+      "type": ["string", "null"],
+      "description": "revision of the data branch holding these files; null when unknown"
+    },
+    "source": {"type": "string"},
+    "data_branch": {"type": "string"},
+    "counts": {
+      "type": "object",
+      "required": ["verified", "discovered", "updated_at"],
+      "properties": {
+        "discovered": {"type": ["integer", "null"]},
+        "checked": {"type": ["integer", "null"]},
+        "verified": {"type": ["integer", "null"]},
+        "stable_in_window": {"type": ["integer", "null"]},
+        "best": {"type": ["integer", "null"]},
+        "sources_ok": {"type": ["integer", "null"]},
+        "sources_total": {"type": ["integer", "null"]},
+        "average_rtt_ms": {"type": ["number", "null"]},
+        "median_rtt_ms": {"type": ["number", "null"]},
+        "updated_at": {"type": ["string", "null"]}
+      }
+    },
+    "files": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["bytes", "sha256"],
+        "properties": {
+          "bytes": {"type": "integer"},
+          "sha256": {"type": "string"},
+          "lines": {"type": "integer"}
+        }
+      }
+    }
+  }
+}
