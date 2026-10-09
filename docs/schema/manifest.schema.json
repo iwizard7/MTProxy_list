@@ -17,6 +17,16 @@
     },
     "source": {"type": "string"},
     "data_branch": {"type": "string"},
+    "languages": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["en", "ru"]},
+      "description": "languages the landing page was generated in"
+    },
+    "pages": {
+      "type": "object",
+      "description": "language code -> page file name",
+      "additionalProperties": {"type": "string"}
+    },
     "counts": {
       "type": "object",
       "required": ["verified", "discovered", "updated_at"],

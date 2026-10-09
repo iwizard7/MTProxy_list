@@ -75,6 +75,7 @@ class BuildSiteTests(unittest.TestCase):
         for name in ("working.txt", "stable.txt", "best.txt", "all.txt", "stats.json", "endpoints.json", "badge.json", "ads.json"):
             self.assertTrue((self.site / name).is_file(), name)
         self.assertTrue((self.site / "index.html").is_file())
+        self.assertTrue((self.site / "ru.html").is_file())
         self.assertTrue((self.site / "manifest.json").is_file())
         self.assertTrue((self.site / ".nojekyll").is_file())
 
@@ -97,6 +98,8 @@ class BuildSiteTests(unittest.TestCase):
         self.assertEqual(manifest["counts"]["median_rtt_ms"], 100.0)
         self.assertEqual(manifest["generated_at"], NOW.isoformat())
         self.assertEqual(manifest["data_branch"], "data")
+        self.assertEqual(manifest["languages"], ["en", "ru"])
+        self.assertEqual(manifest["pages"], {"en": "index.html", "ru": "ru.html"})
 
     def test_index_shows_counts_and_usage(self):
         publish.build_site(
@@ -115,9 +118,10 @@ class BuildSiteTests(unittest.TestCase):
     def test_dynamic_values_are_html_escaped(self):
         write_fixture(self.data, stats_updated_at='<script>alert("x")</script>')
         publish.build_site(self.data, self.site, generated_at=NOW)
-        page = (self.site / "index.html").read_text(encoding="utf-8")
-        self.assertNotIn("<script>alert", page)
-        self.assertIn("&lt;script&gt;", page)
+        for name in ("index.html", "ru.html"):
+            page = (self.site / name).read_text(encoding="utf-8")
+            self.assertNotIn("<script>alert", page, name)
+            self.assertIn("&lt;script&gt;", page, name)
 
     def test_commit_from_argument_or_environment(self):
         manifest = publish.build_site(self.data, self.site, commit="abcdef1234567890", generated_at=NOW)
@@ -192,6 +196,91 @@ class BuildSiteTests(unittest.TestCase):
         )
 
 
+class BilingualTests(unittest.TestCase):
+    """The landing page must be available in English and Russian."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.data = self.root / "proxies"
+        self.site = self.root / "public"
+        write_fixture(self.data)
+
+    def _pages(self):
+        publish.build_site(
+            self.data, self.site, site_url="https://example.test/repo", generated_at=NOW
+        )
+        return {
+            name: (self.site / name).read_text(encoding="utf-8")
+            for name in ("index.html", "ru.html")
+        }
+
+    def test_both_pages_declare_their_language(self):
+        pages = self._pages()
+        self.assertIn('<html lang="en">', pages["index.html"])
+        self.assertIn('<html lang="ru">', pages["ru.html"])
+
+    def test_language_switcher_links_to_the_other_page(self):
+        pages = self._pages()
+        self.assertIn('<strong aria-current="page">EN</strong>', pages["index.html"])
+        self.assertIn('<a href="ru.html" hreflang="ru">RU</a>', pages["index.html"])
+        self.assertIn('<strong aria-current="page">RU</strong>', pages["ru.html"])
+        self.assertIn('<a href="index.html" hreflang="en">EN</a>', pages["ru.html"])
+
+    def test_hreflang_alternates_are_present(self):
+        for name, other in (("index.html", "ru.html"), ("ru.html", "index.html")):
+            page = self._pages()[name]
+            self.assertIn(f'<link rel="alternate" hreflang="en" href="https://example.test/repo/index.html">', page)
+            self.assertIn(f'<link rel="alternate" hreflang="ru" href="https://example.test/repo/ru.html">', page)
+            self.assertIn('hreflang="x-default"', page)
+
+    def test_russian_page_is_translated_and_localized(self):
+        page = self._pages()["ru.html"]
+        self.assertIn("Список MTProto-прокси", page)
+        self.assertIn("Реклама и риски", page)
+        self.assertIn("Как использовать", page)
+        self.assertIn("2 строки", page)          # Russian plural for 2
+        self.assertIn("30 Б", page)              # localized byte suffix
+        self.assertNotIn("Verified now", page)
+        self.assertNotIn("Advertising and risks", page)
+
+    def test_english_page_is_not_russian(self):
+        page = self._pages()["index.html"]
+        self.assertIn("Verified now", page)
+        self.assertIn("2 lines", page)
+        self.assertIn("30 B", page)
+        self.assertNotIn("Проверено сейчас", page)
+
+    def test_single_language_build(self):
+        manifest = publish.build_site(
+            self.data, self.site, languages=("en",), generated_at=NOW
+        )
+        self.assertEqual(manifest["languages"], ["en"])
+        self.assertEqual(manifest["pages"], {"en": "index.html"})
+        self.assertTrue((self.site / "index.html").is_file())
+        self.assertFalse((self.site / "ru.html").exists())
+
+    def test_language_argument_parsing(self):
+        self.assertEqual(publish.normalize_languages("en,ru"), ("en", "ru"))
+        self.assertEqual(publish.normalize_languages("ru"), ("ru",))
+        self.assertEqual(publish.normalize_languages(["RU", "EN"]), ("en", "ru"))
+        self.assertEqual(publish.normalize_languages("de"), ("en",), "unknown codes fall back")
+        self.assertEqual(publish.normalize_languages(""), ("en",))
+
+    def test_plural_and_size_helpers(self):
+        self.assertEqual(publish.plural_ru(1), "строка")
+        self.assertEqual(publish.plural_ru(2), "строки")
+        self.assertEqual(publish.plural_ru(5), "строк")
+        self.assertEqual(publish.plural_ru(11), "строк")
+        self.assertEqual(publish.plural_ru(21), "строка")
+        self.assertEqual(publish.localize_lines("en", 1), "1 line")
+        self.assertEqual(publish.localize_lines("en", 3), "3 lines")
+        self.assertEqual(publish.localize_lines("ru", 3), "3 строки")
+        self.assertEqual(publish.localize_size("en", 2048), "2.0 KB")
+        self.assertEqual(publish.localize_size("ru", 2048), "2,0 КБ")
+        self.assertEqual(publish.localize_size("ru", 512), "512 Б")
+
+
 class CliTests(unittest.TestCase):
     def test_cli_builds_site_and_reports_counts(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -212,6 +301,19 @@ class CliTests(unittest.TestCase):
                 ["--data-dir", str(Path(tmp) / "nope"), "--site-dir", str(Path(tmp) / "site")]
             )
             self.assertEqual(code, 3)
+
+    def test_cli_languages_flag(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            data = root / "proxies"
+            site = root / "public"
+            write_fixture(data)
+            code = publish.main(
+                ["--data-dir", str(data), "--site-dir", str(site), "--languages", "ru"]
+            )
+            self.assertEqual(code, 0)
+            self.assertTrue((site / "ru.html").is_file())
+            self.assertFalse((site / "index.html").exists())
 
     def test_cli_reads_data_dir_from_environment(self):
         with tempfile.TemporaryDirectory() as tmp:

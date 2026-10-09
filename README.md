@@ -24,7 +24,8 @@ from **GitHub Pages** (a stable, CDN-backed URL):
 | [`badge.json`](https://iwizard7.github.io/MTProxy_list/badge.json) | [shields.io endpoint badge](https://shields.io/badges/endpoint-badge) with the current verified count (rendered above). |
 | [`manifest.json`](https://iwizard7.github.io/MTProxy_list/manifest.json) | machine-readable index: sizes, line counts, sha256 of every published file, plus the code and data revisions that produced them. |
 | [`ads.json`](https://iwizard7.github.io/MTProxy_list/ads.json) | optional promoted-channel results produced by `src/adcheck.py`. |
-| [`index.html`](https://iwizard7.github.io/MTProxy_list/) | human-readable page with counts, usage and caveats. |
+| [`index.html`](https://iwizard7.github.io/MTProxy_list/) | human-readable landing page (English) with counts, usage and caveats. |
+| [`ru.html`](https://iwizard7.github.io/MTProxy_list/ru.html) | the same page in Russian; both pages carry a language switcher (`EN · RU`) and `hreflang` alternates. |
 
 Raw URLs through the data branch work as well, e.g.
 `https://raw.githubusercontent.com/iwizard7/MTProxy_list/data/working.txt`.
@@ -88,6 +89,14 @@ Everything is environment-driven (see `src/collector.py::Config.from_env`):
 | `ALLOW_DEGRADED` | `0` | publish even when the guard trips (manual bootstrap) |
 | `DATA_DIR` | `./proxies` | where generated files are read/written (CI: the data worktree) |
 
+The site builder (`src/publish.py`) takes its own knobs:
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `SITE_LANGUAGES` | `en,ru` | languages of the landing page (`en`, `ru`) |
+| `SITE_URL` | Pages URL | public base URL used inside the generated pages |
+| `DATA_COMMIT` | *(unset)* | data-branch revision recorded in `manifest.json` |
+
 Useful local commands:
 
 ```bash
@@ -95,7 +104,8 @@ python3 -m unittest discover -s tests -v            # 127 unit tests, stdlib onl
 python3 src/collector.py --dry-run                  # parse sources, write nothing
 python3 src/collector.py --limit 20                 # small live run into ./proxies
 python3 src/collector.py --dcs 2,4                  # require specific Telegram DCs
-python3 -m src.publish --data-dir proxies --site-dir public   # build the site
+python3 -m src.publish --data-dir proxies --site-dir public   # build both pages
+python3 -m src.publish --languages en --site-dir public       # English page only
 ```
 
 ## GitHub Pages setup (once)
