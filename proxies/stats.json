@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-10-08T23:56:15.001671+00:00",
+  "discovered": 25,
+  "mtproto_verified": 18,
+  "average_latency_ms": 996.17,
+  "check": "real MTProto relay health check",
+  "verification": [
+    "TCP connect",
+    "MTProxy obfuscated2 handshake",
+    "MTProto req_pq_multi",
+    "valid Telegram resPQ response"
+  ],
+  "note": "working.txt contains only proxies that passed the real MTProto health check."
+}
