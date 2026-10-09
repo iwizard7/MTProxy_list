@@ -9,5 +9,13 @@ venv/
 *.session-journal
 *.session.sqlite
 
+# Generated data lives in the `data` branch and is published via GitHub Pages,
+# never committed to main. Local runs still write into ./proxies (ignored), and
+# CI works in the .data worktree.
+/proxies/*
+!/proxies/README.md
+/.data/
+/public/
+
 # Editor / OS noise
 .DS_Store

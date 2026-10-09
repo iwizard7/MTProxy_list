@@ -61,6 +61,29 @@ ADS_FILE = PROXIES_DIR / "ads.json"
 
 STATE_VERSION = 1
 
+
+def set_data_dir(directory: str | Path) -> Path:
+    """Point every published artifact at ``directory``.
+
+    Used by the CI workflow, which keeps the generated data in the ``data``
+    branch worktree instead of committing it to ``main`` (``DATA_DIR`` /
+    ``--data-dir``). Returns the resolved directory.
+    """
+    global PROXIES_DIR, ALL_FILE, WORKING_FILE, STABLE_FILE, BEST_FILE
+    global BADGE_FILE, STATS_FILE, STATE_FILE, ENDPOINTS_FILE, ADS_FILE
+
+    PROXIES_DIR = Path(directory).expanduser().resolve()
+    ALL_FILE = PROXIES_DIR / "all.txt"
+    WORKING_FILE = PROXIES_DIR / "working.txt"
+    STABLE_FILE = PROXIES_DIR / "stable.txt"
+    BEST_FILE = PROXIES_DIR / "best.txt"
+    BADGE_FILE = PROXIES_DIR / "badge.json"
+    STATS_FILE = PROXIES_DIR / "stats.json"
+    STATE_FILE = PROXIES_DIR / "state.json"
+    ENDPOINTS_FILE = PROXIES_DIR / "endpoints.json"
+    ADS_FILE = PROXIES_DIR / "ads.json"
+    return PROXIES_DIR
+
 # ---------------------------------------------------------------------------
 # Sources
 # ---------------------------------------------------------------------------
@@ -1659,12 +1682,20 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="skip optional JSON metadata sources",
     )
+    parser.add_argument(
+        "--data-dir",
+        help="directory for the published files (default: DATA_DIR or ./proxies)",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     cfg = Config.from_env()
+
+    data_dir = args.data_dir or os.environ.get("DATA_DIR")
+    if data_dir:
+        print(f"Data directory: {set_data_dir(data_dir)}")
 
     if args.sources:
         cfg.sources = [s.strip() for s in args.sources.split(",") if s.strip()]

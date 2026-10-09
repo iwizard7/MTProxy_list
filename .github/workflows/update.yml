@@ -1,27 +1,35 @@
 name: Update MTProto proxy list
 
-# Scheduling notes (see FIXES.md):
-#   The previous cron ran every 15 minutes, but GitHub throttles frequent
-#   schedules hard: measured runs were ~4.5/day (median gap 5.7 h) while the
-#   repository collected ~27 commits in 4 days. Going to every 2 hours costs
-#   nothing in real freshness and keeps the git history readable.
+# Architecture (see FIXES.md, "Iteration 4"):
+#   main  -> code only
+#   data  -> generated files + state.json (kept in a worktree at .data/)
+#   Pages -> the public, stable URLs served from the built site (public/)
+#
+# Scheduling note: GitHub throttles frequent schedules hard (a 15-minute cron
+# actually ran ~4.5 times/day), so every 2 hours loses nothing in practice.
 on:
   schedule:
     - cron: "17 */2 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: write   # push the data branch
+  pages: write      # deploy the site
+  id-token: write   # OIDC for the Pages deployment
 
 concurrency:
   group: mtproto-proxy-update
-  cancel-in-progress: true
+  cancel-in-progress: false
+
+env:
+  DATA_DIR: .data/proxies
+  SITE_DIR: public
 
 jobs:
   update:
-    name: Collect and verify proxies
+    name: Collect, verify and publish data
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Checkout repository
@@ -29,7 +37,6 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
-          ref: main
 
       - name: Setup Python
         # actions/setup-python v5.6.0
@@ -47,9 +54,35 @@ jobs:
           pip install --no-deps -r requirements-vcs.txt
 
       - name: Unit tests
-        # stdlib only, no network: guards the parsing/selection/guard logic,
-        # the DNS cache, the stability ranking and the published JSON schemas.
+        # stdlib only, no network: parsing, selection, publish guard, DNS cache,
+        # stability ranking, site builder and the published JSON schemas.
         run: python -m unittest discover -s tests -v
+
+      - name: Prepare data branch worktree
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch --quiet origin data || true
+
+          if git rev-parse --verify --quiet origin/data >/dev/null; then
+            git worktree add -B data .data origin/data
+          else
+            echo "::notice::the data branch does not exist yet — creating an orphan one"
+            git worktree add --detach .data
+            git -C .data checkout --orphan data
+            git -C .data rm -rf --cached . >/dev/null 2>&1 || true
+            find .data -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+            git -C .data commit --allow-empty -m "Initialize the data branch"
+          fi
+
+          mkdir -p "$DATA_DIR"
+          echo "Data worktree:"
+          ls -la .data
+          echo "Existing data files:"
+          ls -la "$DATA_DIR" || true
 
       - name: Collect and verify MTProto proxies
         env:
@@ -61,38 +94,96 @@ jobs:
           STABLE_TTL_HOURS: "24"
           BEST_COUNT: "20"
           DNS_CACHE_HOURS: "6"
-          # Uncomment to also require a specific Telegram DC (slower, stricter):
+          # Uncomment to also require specific Telegram DCs (slower, stricter):
           # CHECK_DCS: "2,4"
         run: |
           python src/collector.py
-          # Exit code 2 means the publish guard tripped: the previous lists are
-          # intentionally kept and the job turns red so the failure is visible.
+          # Exit code 2 means the publish guard tripped. The previous data in the
+          # data branch is kept untouched and the job turns red on purpose.
+
+      - name: Publish data branch
+        run: |
+          set -euo pipefail
+
+          # Never publish anything the collector flagged as degraded.
+          if ! python -c "import json,sys; sys.exit(0 if json.load(open('$DATA_DIR/stats.json')).get('published') else 1)"; then
+            echo "::error::$DATA_DIR/stats.json reports published=false — refusing to publish."
+            exit 1
+          fi
+
+          git -C .data add -A proxies
+
+          if git -C .data diff --cached --quiet; then
+            echo "No data changes detected."
+            exit 0
+          fi
+
+          git -C .data diff --cached --stat
+
+          verified=$(python -c "import json; print(json.load(open('$DATA_DIR/stats.json'))['mtproto_verified'])")
+          git -C .data commit -q -m "Update proxy data (${verified} verified)"
+
+          git -C .data fetch --quiet origin data || true
+          git -C .data rebase origin/data || true
+          git -C .data push origin HEAD:data
+
+      - name: Build Pages site
+        run: |
+          python -m src.publish \
+            --data-dir "$DATA_DIR" \
+            --site-dir "$SITE_DIR" \
+            --site-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+
+      - name: Configure Pages
+        # actions/configure-pages v5 — enablement lets the workflow create the
+        # Pages site itself if it has not been enabled in the repository yet.
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        # actions/upload-pages-artifact v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        with:
+          path: ${{ env.SITE_DIR }}
+
+      - name: Upload run artifact
+        if: always()
+        # actions/upload-artifact v4.6.2 — hidden files are excluded by default,
+        # hence include-hidden-files for the .data worktree.
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: mtproto-run-data
+          include-hidden-files: true
+          path: |
+            ${{ env.DATA_DIR }}/all.txt
+            ${{ env.DATA_DIR }}/working.txt
+            ${{ env.DATA_DIR }}/stable.txt
+            ${{ env.DATA_DIR }}/best.txt
+            ${{ env.DATA_DIR }}/badge.json
+            ${{ env.DATA_DIR }}/stats.json
+            ${{ env.DATA_DIR }}/endpoints.json
+            ${{ env.DATA_DIR }}/state.json
+            ${{ env.DATA_DIR }}/ads.json
+          if-no-files-found: warn
+          retention-days: 7
 
       - name: Show generated statistics
         if: always()
         run: |
           echo "===== Proxy statistics ====="
 
-          if [ -f proxies/stats.json ]; then
-            python -m json.tool proxies/stats.json | head -60
+          if [ -f "$DATA_DIR/stats.json" ]; then
+            python -m json.tool "$DATA_DIR/stats.json" | head -60
           else
             echo "stats.json not found"
-          fi
-
-          echo
-          echo "===== Badge ====="
-
-          if [ -f proxies/badge.json ]; then
-            cat proxies/badge.json
-          else
-            echo "badge.json not found"
           fi
 
           echo
           echo "===== Line counts ====="
 
           for name in all working stable best; do
-            file="proxies/${name}.txt"
+            file="$DATA_DIR/${name}.txt"
             if [ -f "$file" ]; then
               printf '%s: %s lines\n' "$name.txt" "$(wc -l < "$file")"
             else
@@ -100,52 +191,21 @@ jobs:
             fi
           done
 
-      - name: Commit and push changes
-        # Only on success: a tripped publish guard must never be committed.
-        if: success()
-        run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add proxies/
-
-          if git diff --cached --quiet; then
-            echo "No changes detected."
-            exit 0
-          fi
-
-          # Belt and braces: refuse to publish anything the collector flagged.
-          if ! python -c "import json,sys; sys.exit(0 if json.load(open('proxies/stats.json')).get('published') else 1)"; then
-            echo "::error::proxies/stats.json reports published=false — refusing to commit."
-            exit 1
-          fi
-
-          git diff --cached --stat
-
-          verified=$(python -c "import json; print(json.load(open('proxies/stats.json'))['mtproto_verified'])")
-          git commit -m "Update MTProto proxy list (${verified} verified)"
-
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
-
-      - name: Upload results
-        if: always()
-        # actions/upload-artifact v4.6.2
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: mtproto-proxy-results
-          path: |
-            proxies/all.txt
-            proxies/working.txt
-            proxies/stable.txt
-            proxies/best.txt
-            proxies/badge.json
-            proxies/stats.json
-            proxies/endpoints.json
-            proxies/state.json
-            proxies/ads.json
-          if-no-files-found: warn
-          retention-days: 7
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: update
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy
+        id: deployment
+        # actions/deploy-pages v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

@@ -69,6 +69,7 @@ from collector import (  # noqa: E402  (same directory import)
     endpoint_key,
     build_url,
     parse_proxy,
+    set_data_dir as set_collector_data_dir,
 )
 
 DEFAULT_CACHE_DAYS = 7.0
@@ -79,6 +80,18 @@ METHOD_NOTE = (
     "connect an authorized user session through the proxy and call "
     "help.getPromoData; proxy=true + peer means an injected sponsored channel"
 )
+
+
+def set_data_dir(directory: str | Path) -> Path:
+    """Point adcheck (and the collector it imports) at a data directory."""
+    global PROXIES_DIR, ADS_FILE, WORKING_FILE, ENDPOINTS_FILE
+
+    set_collector_data_dir(directory)
+    PROXIES_DIR = Path(directory).expanduser().resolve()
+    ADS_FILE = PROXIES_DIR / "ads.json"
+    WORKING_FILE = PROXIES_DIR / "working.txt"
+    ENDPOINTS_FILE = PROXIES_DIR / "endpoints.json"
+    return PROXIES_DIR
 
 
 # ---------------------------------------------------------------------------
@@ -562,12 +575,20 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--dry-run", action="store_true", help="list targets, do not connect"
     )
+    parser.add_argument(
+        "--data-dir",
+        help="directory with the published files (default: DATA_DIR or ./proxies)",
+    )
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     now = datetime.now(timezone.utc)
+
+    data_dir = args.data_dir or os.environ.get("DATA_DIR")
+    if data_dir:
+        print(f"Data directory: {set_data_dir(data_dir)}")
 
     proxy = None
     if args.endpoint:

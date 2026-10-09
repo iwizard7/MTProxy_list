@@ -12,8 +12,8 @@ name: Check proxies for injected ads
 #   TELEGRAM_API_HASH  - from https://my.telegram.org
 #   TELEGRAM_SESSION   - a Telethon StringSession of a DEDICATED account
 #
-# To enable it: Settings -> Secrets and variables -> Actions -> New repository
-# secret for each of the three names above, then run this workflow manually.
+# Results are committed to the `data` branch (proxies/ads.json) and the Pages
+# site is rebuilt so the metadata is served immediately.
 
 on:
   workflow_dispatch:
@@ -29,11 +29,17 @@ on:
         default: false
 
 permissions:
-  contents: write
+  contents: write   # push the data branch
+  pages: write      # rebuild the site
+  id-token: write   # OIDC for the Pages deployment
 
 concurrency:
   group: mtproto-ads-check
   cancel-in-progress: false
+
+env:
+  DATA_DIR: .data/proxies
+  SITE_DIR: public
 
 jobs:
   ads:
@@ -47,7 +53,6 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
-          ref: main
 
       - name: Setup Python
         # actions/setup-python v5.6.0
@@ -59,13 +64,25 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # adcheck.py only needs Telethon; the collector code is imported
-          # from src/ and has no third-party runtime dependency of its own
-          # beyond what is already in the standard library.
+          # adcheck.py only needs Telethon; the collector code is imported from
+          # src/ and has no third-party runtime dependency of its own beyond the
+          # standard library.
           pip install -r requirements-ads.txt
 
       - name: Unit tests
         run: python -m unittest discover -s tests -v
+
+      - name: Prepare data branch worktree
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch --quiet origin data
+          git worktree add -B data .data origin/data
+          mkdir -p "$DATA_DIR"
+          ls -la "$DATA_DIR"
 
       - name: Probe proxies
         env:
@@ -76,27 +93,42 @@ jobs:
         run: |
           python src/adcheck.py --from-endpoints --limit "${{ inputs.limit }}" ${{ inputs.force && '--force' || '' }}
 
-      - name: Commit results
-        if: success()
+      - name: Publish ads.json to the data branch
         run: |
           set -euo pipefail
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git -C .data add -A proxies/ads.json
 
-          git add proxies/ads.json
-
-          if git diff --cached --quiet; then
+          if git -C .data diff --cached --quiet; then
             echo "No changes detected."
             exit 0
           fi
 
-          git diff --cached --stat
-          git commit -m "Update ads.json"
+          git -C .data diff --cached --stat
+          git -C .data commit -q -m "Update ads.json"
 
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          git -C .data fetch --quiet origin data || true
+          git -C .data rebase origin/data || true
+          git -C .data push origin HEAD:data
+
+      - name: Build Pages site
+        run: |
+          python -m src.publish \
+            --data-dir "$DATA_DIR" \
+            --site-dir "$SITE_DIR" \
+            --site-url "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+
+      - name: Configure Pages
+        # actions/configure-pages v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b
+        with:
+          enablement: true
+
+      - name: Upload Pages artifact
+        # actions/upload-pages-artifact v3
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
+        with:
+          path: ${{ env.SITE_DIR }}
 
       - name: Upload results
         if: always()
@@ -104,6 +136,26 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: mtproto-ads-results
-          path: proxies/ads.json
+          include-hidden-files: true
+          path: ${{ env.DATA_DIR }}/ads.json
           if-no-files-found: warn
           retention-days: 7
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: ads
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy
+        id: deployment
+        # actions/deploy-pages v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e

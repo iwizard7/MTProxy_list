@@ -1,5 +1,5 @@
 [![Update MTProto proxy list](https://github.com/iwizard7/MTProxy_list/actions/workflows/update.yml/badge.svg)](https://github.com/iwizard7/MTProxy_list/actions/workflows/update.yml)
-![verified proxies](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiwizard7%2FMTProxy_list%2Fmain%2Fproxies%2Fbadge.json)
+![verified proxies](https://img.shields.io/endpoint?url=https%3A%2F%2Fiwizard7.github.io%2FMTProxy_list%2Fbadge.json)
 # Mtproxy_list
 
 Automatically refreshed list of publicly advertised Telegram MTProto proxy links.
@@ -7,19 +7,34 @@ Every published link is checked with a real MTProto relay health check
 (obfuscated2 handshake + `req_pq_multi` + `resPQ` validation), not just a TCP
 connect.
 
-## Files
+## Where the data lives
+
+`main` contains **code only**. Generated data is committed to the
+[`data` branch](https://github.com/iwizard7/MTProxy_list/tree/data) and served
+from **GitHub Pages** (a stable, CDN-backed URL):
 
 | File | Contents |
 |---|---|
-| `proxies/working.txt` | links that passed the health check in the **latest run**. |
-| `proxies/stable.txt` | links verified within the last 24 hours, most stable first. |
-| `proxies/best.txt` | top 20 endpoints by stability (success rate, then median RTT). |
-| `proxies/all.txt` | every syntactically valid, deduplicated link discovered (one per `host:port`). |
-| `proxies/endpoints.json` | per-endpoint metadata: verification, `rtt_ms`, `check_ms`, `median_rtt_ms`, `success_rate`, `rtt_trend`, engine, last error, ads status, upstream metadata. |
-| `proxies/stats.json` | run statistics: source health, rejected links, publish guard, DNS cache, thresholds. |
-| `proxies/state.json` | state between runs: per-endpoint history (`ok_count`, `fail_count`, RTT samples), per-source history, DNS cache. |
-| `proxies/badge.json` | [shields.io endpoint badge](https://shields.io/badges/endpoint-badge) with the current verified count (rendered above). |
-| `proxies/ads.json` | optional promoted-channel results produced by `src/adcheck.py`. |
+| [`working.txt`](https://iwizard7.github.io/MTProxy_list/working.txt) | links that passed the health check in the **latest run**. |
+| [`stable.txt`](https://iwizard7.github.io/MTProxy_list/stable.txt) | links verified within the last 24 hours, most stable first. |
+| [`best.txt`](https://iwizard7.github.io/MTProxy_list/best.txt) | top 20 endpoints by stability (success rate, then median RTT). |
+| [`all.txt`](https://iwizard7.github.io/MTProxy_list/all.txt) | every syntactically valid, deduplicated link discovered (one per `host:port`). |
+| [`endpoints.json`](https://iwizard7.github.io/MTProxy_list/endpoints.json) | per-endpoint metadata: verification, `rtt_ms`, `check_ms`, `median_rtt_ms`, `success_rate`, `rtt_trend`, engine, last error, ads status, upstream metadata. |
+| [`stats.json`](https://iwizard7.github.io/MTProxy_list/stats.json) | run statistics: source health, rejected links, publish guard, DNS cache, thresholds. |
+| [`badge.json`](https://iwizard7.github.io/MTProxy_list/badge.json) | [shields.io endpoint badge](https://shields.io/badges/endpoint-badge) with the current verified count (rendered above). |
+| [`manifest.json`](https://iwizard7.github.io/MTProxy_list/manifest.json) | machine-readable index: sizes, line counts and sha256 of every published file. |
+| [`ads.json`](https://iwizard7.github.io/MTProxy_list/ads.json) | optional promoted-channel results produced by `src/adcheck.py`. |
+| [`index.html`](https://iwizard7.github.io/MTProxy_list/) | human-readable page with counts, usage and caveats. |
+
+Raw URLs through the data branch work as well, e.g.
+`https://raw.githubusercontent.com/iwizard7/MTProxy_list/data/working.txt`.
+`state.json` (internal history: per-endpoint results, DNS cache, source
+contribution) also lives in that branch and is deliberately not published on the
+site.
+
+> **Deprecated:** the old `https://raw.githubusercontent.com/iwizard7/MTProxy_list/main/proxies/…`
+> URLs are no longer updated — the files moved to the data branch. Nothing else
+> breaks: file names and formats are unchanged.
 
 Schemas for every JSON file live in [`docs/schema/`](docs/schema) and are
 enforced by the test suite, so published fields cannot be renamed silently.
@@ -71,15 +86,37 @@ Everything is environment-driven (see `src/collector.py::Config.from_env`):
 | `GUARD_DNS` | `1` | resolve hosts and reject non-public addresses |
 | `CHECK_ENGINE` | `auto` | `library` (in-process) or `cli` (subprocess) |
 | `ALLOW_DEGRADED` | `0` | publish even when the guard trips (manual bootstrap) |
+| `DATA_DIR` | `./proxies` | where generated files are read/written (CI: the data worktree) |
 
 Useful local commands:
 
 ```bash
-python3 -m unittest discover -s tests -v   # 115 unit tests, stdlib only
-python3 src/collector.py --dry-run         # parse sources, write nothing
-python3 src/collector.py --limit 20        # small live run
-python3 src/collector.py --dcs 2,4         # require specific Telegram DCs
+python3 -m unittest discover -s tests -v            # 127 unit tests, stdlib only
+python3 src/collector.py --dry-run                  # parse sources, write nothing
+python3 src/collector.py --limit 20                 # small live run into ./proxies
+python3 src/collector.py --dcs 2,4                  # require specific Telegram DCs
+python3 -m src.publish --data-dir proxies --site-dir public   # build the site
 ```
+
+## GitHub Pages setup (once)
+
+The workflow deploys the site with `actions/deploy-pages`, which needs Pages to
+be available for the repository:
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions** (no
+   branch or folder to pick — the workflow uploads the artifact).
+2. Save. The first run creates the `github-pages` environment and publishes
+   `https://iwizard7.github.io/MTProxy_list/`.
+
+The workflow also passes `enablement: true` to `actions/configure-pages`, so a
+missing Pages site is created automatically where the token allows it. If the
+deploy step fails with *"Get Pages site failed"*, the data branch still updates —
+only the site lags until step 1 is done.
+
+The site is rebuilt on every run (including when the data itself did not change),
+so `index.html`, `manifest.json` and the `generated_at`/commit fields stay fresh.
+Pages serves through a CDN with roughly 10 minutes of caching; the shields.io
+badge uses `cacheSeconds` for the same reason.
 
 ## Advertising (promoted channels)
 
@@ -92,8 +129,8 @@ Detecting it therefore requires a real Telegram **user session** connected
 *through* the proxy, followed by a `help.getPromoData` call: the response has a
 `proxy` flag and a `peer` field naming the promoted channel. `src/adcheck.py`
 does exactly this (optional, opt-in, needs your own API ID/hash and session) and
-writes `proxies/ads.json`, which the collector merges into
-`proxies/endpoints.json` as `ads.status` = `present` / `none` / `unknown`.
+writes `ads.json` to the data branch, which the collector merges into
+`endpoints.json` as `ads.status` = `present` / `none` / `unknown`.
 
 Run it locally (`python3 src/adcheck.py --limit 20`) or manually from
 **Actions → Check proxies for injected ads**, which requires the repository
@@ -125,12 +162,15 @@ See `FIXES.md` for the mechanics, the evidence and the risks before enabling it.
 
 ## Setup
 
-1. Push this project to your repository's default branch.
+1. Push this project to your repository's default branch (`main`).
 2. In GitHub, open **Settings → Actions → General** and allow workflows to run.
-   The workflow needs repository `contents: write` permission to commit updated
-   lists.
-3. Open **Actions** and run **Update MTProto proxy list** once manually.
-4. Inspect the workflow log and the resulting files.
+   The workflow needs `contents: write` (to push the `data` branch) and Pages
+   permissions, which are declared in the workflow file itself.
+3. Enable Pages once: **Settings → Pages → Source: GitHub Actions** (see
+   [GitHub Pages setup](#github-pages-setup-once)).
+4. Open **Actions** and run **Update MTProto proxy list** once manually. The
+   first run creates the `data` branch automatically if it does not exist.
+5. Inspect the workflow log, the `data` branch and the published site.
 
 ## Scope and limitations
 
