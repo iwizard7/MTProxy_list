@@ -1,8 +1,86 @@
 {
-  "updated_at": "2026-10-08T23:56:15.001671+00:00",
-  "discovered": 25,
-  "mtproto_verified": 18,
-  "average_latency_ms": 996.17,
+  "updated_at": "2026-10-09T05:53:46.483949+00:00",
+  "published": true,
+  "publish_blocked_reasons": [],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt",
+      "ok": true,
+      "bytes": 16104,
+      "links_found": 171,
+      "links_accepted": 171,
+      "endpoints_new": 171,
+      "duplicate_endpoints": 0,
+      "error": null
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt",
+      "ok": true,
+      "bytes": 23308,
+      "links_found": 261,
+      "links_accepted": 252,
+      "endpoints_new": 124,
+      "duplicate_endpoints": 128,
+      "error": null
+    }
+  ],
+  "metadata_sources": [],
+  "source_history": {
+    "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt": {
+      "kind": "list",
+      "runs": 1,
+      "last_run": "2026-10-09T05:53:46.483949+00:00",
+      "last_ok": "2026-10-09T05:53:46.483949+00:00",
+      "last_error": null,
+      "last_links_found": 171,
+      "last_links_accepted": 171,
+      "last_new_endpoints": 171,
+      "total_new_endpoints": 171,
+      "total_links_accepted": 171,
+      "ok_runs": 1
+    },
+    "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt": {
+      "kind": "list",
+      "runs": 1,
+      "last_run": "2026-10-09T05:53:46.483949+00:00",
+      "last_ok": "2026-10-09T05:53:46.483949+00:00",
+      "last_error": null,
+      "last_links_found": 261,
+      "last_links_accepted": 252,
+      "last_new_endpoints": 124,
+      "total_new_endpoints": 124,
+      "total_links_accepted": 252,
+      "ok_runs": 1
+    }
+  },
+  "sources_ok": 2,
+  "sources_total": 2,
+  "discovered": 295,
+  "duplicate_endpoints_removed": 0,
+  "checked_candidates": 295,
+  "skipped_by_cap": 0,
+  "mtproto_verified": 271,
+  "stable_in_window": 271,
+  "best_published": 20,
+  "blocked_non_public": 4,
+  "block_reasons": {
+    "dns_no_addresses": 4
+  },
+  "rejected_links": {
+    "bad_secret": 9
+  },
+  "average_rtt_ms": 563.03,
+  "average_check_ms": 699.96,
+  "median_rtt_ms": 453.84,
+  "dns_cache": {
+    "hosts": 239,
+    "hits": 0,
+    "misses": 239,
+    "ttl_hours": 6.0
+  },
+  "engines": [
+    "library"
+  ],
   "check": "real MTProto relay health check",
   "verification": [
     "TCP connect",
@@ -10,5 +88,18 @@
     "MTProto req_pq_multi",
     "valid Telegram resPQ response"
   ],
-  "note": "working.txt contains only proxies that passed the real MTProto health check."
+  "policy": {
+    "min_discovered": 10,
+    "min_keep_ratio": 0.25,
+    "max_candidates": 400,
+    "known_good_hours": 6.0,
+    "stable_ttl_hours": 24.0,
+    "best_count": 20,
+    "rtt_history": 10,
+    "dns_cache_hours": 6.0,
+    "dcs": [],
+    "guard_dns": true,
+    "engine": "auto"
+  },
+  "note": "working.txt = verified in this run; stable.txt = verified within 24h, best first; best.txt = top 20 by stability; a green check only means the MTProto handshake to Telegram succeeded."
 }
