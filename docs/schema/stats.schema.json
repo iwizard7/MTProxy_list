@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/iwizard7/MTProxy_list/docs/schema/stats.schema.json",
+  "title": "proxies/stats.json",
+  "description": "Per-run statistics published by src/collector.py. Validated by tests/test_schemas.py.",
+  "type": "object",
+  "required": [
+    "updated_at",
+    "published",
+    "publish_blocked_reasons",
+    "sources",
+    "sources_ok",
+    "sources_total",
+    "discovered",
+    "mtproto_verified",
+    "stable_in_window",
+    "average_rtt_ms",
+    "average_check_ms",
+    "policy",
+    "note"
+  ],
+  "properties": {
+    "updated_at": {"type": "string", "description": "ISO-8601 UTC timestamp of the run"},
+    "published": {"type": "boolean", "description": "false when the publish guard tripped"},
+    "publish_blocked_reasons": {"type": "array", "items": {"type": "string"}},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "ok", "bytes", "links_found", "links_accepted", "endpoints_new", "duplicate_endpoints", "error"],
+        "properties": {
+          "url": {"type": "string"},
+          "ok": {"type": "boolean"},
+          "bytes": {"type": "integer"},
+          "links_found": {"type": "integer"},
+          "links_accepted": {"type": "integer"},
+          "endpoints_new": {"type": "integer"},
+          "duplicate_endpoints": {"type": "integer"},
+          "error": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "metadata_sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["url", "ok", "bytes", "entries", "error"],
+        "properties": {
+          "url": {"type": "string"},
+          "ok": {"type": "boolean"},
+          "bytes": {"type": "integer"},
+          "entries": {"type": "integer"},
+          "error": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "source_history": {"type": "object"},
+    "sources_ok": {"type": "integer"},
+    "sources_total": {"type": "integer"},
+    "discovered": {"type": "integer", "description": "distinct host:port endpoints after dedup"},
+    "duplicate_endpoints_removed": {"type": "integer"},
+    "checked_candidates": {"type": "integer"},
+    "skipped_by_cap": {"type": "integer"},
+    "mtproto_verified": {"type": "integer"},
+    "stable_in_window": {"type": "integer"},
+    "best_published": {"type": "integer"},
+    "blocked_non_public": {"type": "integer"},
+    "block_reasons": {"type": "object"},
+    "rejected_links": {"type": "object"},
+    "average_rtt_ms": {"type": ["number", "null"]},
+    "average_check_ms": {"type": ["number", "null"]},
+    "median_rtt_ms": {"type": ["number", "null"]},
+    "dns_cache": {
+      "type": "object",
+      "required": ["hosts", "hits", "misses", "ttl_hours"],
+      "properties": {
+        "hosts": {"type": "integer"},
+        "hits": {"type": "integer"},
+        "misses": {"type": "integer"},
+        "ttl_hours": {"type": "number"}
+      }
+    },
+    "engines": {"type": "array", "items": {"type": "string"}},
+    "check": {"type": "string"},
+    "verification": {"type": "array", "items": {"type": "string"}},
+    "policy": {
+      "type": "object",
+      "required": ["min_discovered", "min_keep_ratio", "max_candidates", "stable_ttl_hours", "guard_dns", "engine"],
+      "properties": {
+        "min_discovered": {"type": "integer"},
+        "min_keep_ratio": {"type": "number"},
+        "max_candidates": {"type": "integer"},
+        "known_good_hours": {"type": "number"},
+        "stable_ttl_hours": {"type": "number"},
+        "best_count": {"type": "integer"},
+        "rtt_history": {"type": "integer"},
+        "dns_cache_hours": {"type": "number"},
+        "dcs": {"type": "array", "items": {"type": "integer"}},
+        "guard_dns": {"type": "boolean"},
+        "engine": {"type": "string", "enum": ["auto", "library", "cli"]}
+      }
+    },
+    "note": {"type": "string"}
+  }
+}

@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Keeps the SHA-pinned actions current; Dependabot understands SHA pins when
+  # the version is mentioned in a trailing comment (it is, in both workflows).
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
+
+  # requirements.txt holds plain == pins, which Dependabot can update.
+  # requirements-vcs.txt is a VCS dependency pinned to a commit SHA and is
+  # intentionally not auto-updated.
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"

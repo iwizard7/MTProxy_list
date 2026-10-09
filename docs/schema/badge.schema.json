@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/iwizard7/MTProxy_list/docs/schema/badge.schema.json",
+  "title": "proxies/badge.json",
+  "description": "shields.io endpoint badge published by src/collector.py.",
+  "type": "object",
+  "required": ["schemaVersion", "label", "message", "color"],
+  "properties": {
+    "schemaVersion": {"type": "integer", "const": 1},
+    "label": {"type": "string"},
+    "message": {"type": "string"},
+    "color": {"type": "string", "enum": ["brightgreen", "yellow", "orange", "red"]},
+    "cacheSeconds": {"type": "integer"}
+  }
+}

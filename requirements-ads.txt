@@ -1,0 +1,6 @@
+# Optional: only needed for src/adcheck.py (promoted-channel / "ads" detection).
+#
+# Kept separate from requirements.txt so that the main collector stays free of
+# Telegram-account dependencies. Install with:
+#   pip install -r requirements-ads.txt
+telethon==1.45.0

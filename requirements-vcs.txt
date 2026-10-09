@@ -1,0 +1,14 @@
+# VCS dependency, isolated from requirements.txt on purpose.
+#
+# The MTProto health checker is not on PyPI, so it is installed from GitHub and
+# pinned to an immutable commit (main @ 2026-06-01). Never replace the SHA with
+# a branch name: the CI job runs with `contents: write`, so a compromised
+# upstream branch could push to this repository.
+#
+# It is installed with `pip install --no-deps` in the workflow: its only
+# dependency (cryptography) is already pinned in requirements.txt, which keeps
+# the dependency graph fully explicit.
+#
+# Dependabot cannot update this line - bump it deliberately and note the bump
+# in FIXES.md.
+mtproxy-checker @ git+https://github.com/alimghmi/mtproxychecker.git@80224c93c47242575107c83eb603d675e49226e8

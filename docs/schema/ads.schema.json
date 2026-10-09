@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/iwizard7/MTProxy_list/docs/schema/ads.schema.json",
+  "title": "proxies/ads.json",
+  "description": "Promoted-channel detection results produced by src/adcheck.py. Validated by tests/test_schemas.py.",
+  "type": "object",
+  "required": ["updated_at", "method", "results"],
+  "properties": {
+    "updated_at": {"type": "string"},
+    "method": {"type": "string"},
+    "promo_method": {"type": "string"},
+    "cache_days": {"type": "number"},
+    "results": {
+      "type": "object",
+      "description": "keyed by canonical host:port endpoint",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["has_ads"],
+        "properties": {
+          "has_ads": {"type": ["boolean", "null"], "description": "null = not determined"},
+          "proxy_flag": {"type": "boolean"},
+          "channel": {"type": ["string", "null"]},
+          "peer": {"type": ["string", "null"]},
+          "expires": {"type": ["string", "integer", "null"]},
+          "psa_type": {"type": ["string", "null"]},
+          "secret_kind": {"type": "string", "enum": ["plain", "dd", "faketls", "unknown"]},
+          "transport": {"type": "string"},
+          "checked_at": {"type": "string"},
+          "url": {"type": "string"},
+          "error": {"type": ["string", "null"]},
+          "note": {"type": "string"}
+        }
+      }
+    }
+  }
+}

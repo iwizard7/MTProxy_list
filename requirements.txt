@@ -1,2 +1,12 @@
-requests>=2.32,<3
-git+https://github.com/alimghmi/mtproxychecker.git
+# Direct runtime dependencies, pinned to exact versions.
+#
+# Why exact pins (see FIXES.md, improvement #8):
+#   * everything is reproducible: a new release cannot change a CI run;
+#   * `pip install --require-hashes` is NOT possible for this project because
+#     the health checker is a VCS dependency (see requirements-vcs.txt) and
+#     hash-checking mode does not support direct URLs. Exact pins plus a
+#     commit-SHA pin for the VCS dependency are the strongest thing available
+#     without vendoring or publishing the checker on PyPI.
+#   * Dependabot (.github/dependabot.yml) keeps these two lines up to date.
+requests==2.34.2
+cryptography==50.0.2

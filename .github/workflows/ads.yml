@@ -1,0 +1,109 @@
+name: Check proxies for injected ads
+
+# Manual-only on purpose.
+#
+# This workflow drives a real Telegram *user account* through public proxies
+# (help.getPromoData) to find out which ones inject a sponsored channel. It is
+# never scheduled, because unattended account use is both a security and an
+# anti-spam risk. Read the "Advertising" section of FIXES.md first.
+#
+# Required repository secrets:
+#   TELEGRAM_API_ID    - from https://my.telegram.org
+#   TELEGRAM_API_HASH  - from https://my.telegram.org
+#   TELEGRAM_SESSION   - a Telethon StringSession of a DEDICATED account
+#
+# To enable it: Settings -> Secrets and variables -> Actions -> New repository
+# secret for each of the three names above, then run this workflow manually.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "How many proxies to probe"
+        required: false
+        default: "20"
+      force:
+        description: "Ignore cached results"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mtproto-ads-check
+  cancel-in-progress: false
+
+jobs:
+  ads:
+    name: Probe proxies for promoted channels
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        # actions/checkout v4.4.0
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          ref: main
+
+      - name: Setup Python
+        # actions/setup-python v5.6.0
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # adcheck.py only needs Telethon; the collector code is imported
+          # from src/ and has no third-party runtime dependency of its own
+          # beyond what is already in the standard library.
+          pip install -r requirements-ads.txt
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Probe proxies
+        env:
+          PYTHONUNBUFFERED: "1"
+          TELEGRAM_API_ID: ${{ secrets.TELEGRAM_API_ID }}
+          TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
+          TELEGRAM_SESSION: ${{ secrets.TELEGRAM_SESSION }}
+        run: |
+          python src/adcheck.py --from-endpoints --limit "${{ inputs.limit }}" ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit results
+        if: success()
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add proxies/ads.json
+
+          if git diff --cached --quiet; then
+            echo "No changes detected."
+            exit 0
+          fi
+
+          git diff --cached --stat
+          git commit -m "Update ads.json"
+
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+
+      - name: Upload results
+        if: always()
+        # actions/upload-artifact v4.6.2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: mtproto-ads-results
+          path: proxies/ads.json
+          if-no-files-found: warn
+          retention-days: 7

@@ -1,8 +1,13 @@
 name: Update MTProto proxy list
 
+# Scheduling notes (see FIXES.md):
+#   The previous cron ran every 15 minutes, but GitHub throttles frequent
+#   schedules hard: measured runs were ~4.5/day (median gap 5.7 h) while the
+#   repository collected ~27 commits in 4 days. Going to every 2 hours costs
+#   nothing in real freshness and keeps the git history readable.
 on:
   schedule:
-    - cron: "7,22,37,52 * * * *"
+    - cron: "17 */2 * * *"
   workflow_dispatch:
 
 permissions:
@@ -15,18 +20,20 @@ concurrency:
 jobs:
   update:
     name: Collect and verify proxies
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        # actions/checkout v4.4.0 — pinned by SHA (tags are mutable).
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
           ref: main
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        # actions/setup-python v5.6.0
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: "3.12"
           cache: "pip"
@@ -35,12 +42,31 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          # The checker is a VCS dependency pinned to a commit SHA and installed
+          # without dependency resolution: cryptography is pinned above.
+          pip install --no-deps -r requirements-vcs.txt
+
+      - name: Unit tests
+        # stdlib only, no network: guards the parsing/selection/guard logic,
+        # the DNS cache, the stability ranking and the published JSON schemas.
+        run: python -m unittest discover -s tests -v
 
       - name: Collect and verify MTProto proxies
         env:
           PYTHONUNBUFFERED: "1"
+          # Tuning is env-driven; see src/collector.py::Config.from_env.
+          MAX_CANDIDATES: "400"
+          MIN_DISCOVERED: "10"
+          MIN_KEEP_RATIO: "0.25"
+          STABLE_TTL_HOURS: "24"
+          BEST_COUNT: "20"
+          DNS_CACHE_HOURS: "6"
+          # Uncomment to also require a specific Telegram DC (slower, stricter):
+          # CHECK_DCS: "2,4"
         run: |
           python src/collector.py
+          # Exit code 2 means the publish guard tripped: the previous lists are
+          # intentionally kept and the job turns red so the failure is visible.
 
       - name: Show generated statistics
         if: always()
@@ -48,32 +74,37 @@ jobs:
           echo "===== Proxy statistics ====="
 
           if [ -f proxies/stats.json ]; then
-            cat proxies/stats.json
+            python -m json.tool proxies/stats.json | head -60
           else
             echo "stats.json not found"
           fi
 
           echo
-          echo "===== All proxies ====="
+          echo "===== Badge ====="
 
-          if [ -f proxies/all.txt ]; then
-            wc -l proxies/all.txt
+          if [ -f proxies/badge.json ]; then
+            cat proxies/badge.json
           else
-            echo "all.txt not found"
+            echo "badge.json not found"
           fi
 
           echo
-          echo "===== Working proxies ====="
+          echo "===== Line counts ====="
 
-          if [ -f proxies/working.txt ]; then
-            wc -l proxies/working.txt
-          else
-            echo "working.txt not found"
-          fi
+          for name in all working stable best; do
+            file="proxies/${name}.txt"
+            if [ -f "$file" ]; then
+              printf '%s: %s lines\n' "$name.txt" "$(wc -l < "$file")"
+            else
+              echo "$name.txt not found"
+            fi
+          done
 
       - name: Commit and push changes
+        # Only on success: a tripped publish guard must never be committed.
+        if: success()
         run: |
-          set -e
+          set -euo pipefail
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -85,23 +116,36 @@ jobs:
             exit 0
           fi
 
+          # Belt and braces: refuse to publish anything the collector flagged.
+          if ! python -c "import json,sys; sys.exit(0 if json.load(open('proxies/stats.json')).get('published') else 1)"; then
+            echo "::error::proxies/stats.json reports published=false — refusing to commit."
+            exit 1
+          fi
+
           git diff --cached --stat
 
-          git commit -m "Update MTProto proxy list"
+          verified=$(python -c "import json; print(json.load(open('proxies/stats.json'))['mtproto_verified'])")
+          git commit -m "Update MTProto proxy list (${verified} verified)"
 
           git fetch origin main
           git rebase origin/main
-
           git push origin HEAD:main
 
       - name: Upload results
         if: always()
-        uses: actions/upload-artifact@v4
+        # actions/upload-artifact v4.6.2
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: mtproto-proxy-results
           path: |
             proxies/all.txt
             proxies/working.txt
+            proxies/stable.txt
+            proxies/best.txt
+            proxies/badge.json
             proxies/stats.json
+            proxies/endpoints.json
+            proxies/state.json
+            proxies/ads.json
           if-no-files-found: warn
           retention-days: 7

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/iwizard7/MTProxy_list/docs/schema/endpoints.schema.json",
+  "title": "proxies/endpoints.json",
+  "description": "Per-endpoint metadata published by src/collector.py. Validated by tests/test_schemas.py.",
+  "type": "object",
+  "required": ["updated_at", "count", "verified", "endpoints"],
+  "properties": {
+    "updated_at": {"type": "string"},
+    "count": {"type": "integer"},
+    "verified": {"type": "integer"},
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "url",
+          "server",
+          "port",
+          "secret",
+          "endpoint",
+          "verified",
+          "check_ms",
+          "rtt_ms",
+          "engine",
+          "error",
+          "ads",
+          "median_rtt_ms",
+          "success_rate",
+          "rtt_trend",
+          "samples"
+        ],
+        "properties": {
+          "url": {"type": "string", "description": "normalized tg://proxy link"},
+          "server": {"type": "string"},
+          "port": {"type": "integer"},
+          "secret": {"type": "string"},
+          "endpoint": {"type": "string", "description": "canonical host:port key"},
+          "verified": {"type": "boolean"},
+          "check_ms": {"type": ["number", "null"]},
+          "rtt_ms": {"type": ["number", "null"], "description": "protocol RTT, library engine only"},
+          "engine": {"type": "string"},
+          "error": {"type": ["string", "null"]},
+          "median_rtt_ms": {"type": ["number", "null"]},
+          "success_rate": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+          "rtt_trend": {"type": "string", "enum": ["improving", "stable", "degrading", "unknown"]},
+          "samples": {"type": "integer"},
+          "ads": {
+            "type": "object",
+            "required": ["status", "channel", "checked_at"],
+            "properties": {
+              "status": {"type": "string", "enum": ["present", "none", "unknown"]},
+              "channel": {"type": ["string", "null"]},
+              "checked_at": {"type": ["string", "null"]}
+            }
+          },
+          "upstream": {
+            "type": "object",
+            "description": "metadata copied from an optional JSON metadata source",
+            "properties": {
+              "latency": {"type": ["number", "null"]},
+              "operators": {"type": "object"},
+              "sources": {"type": "array", "items": {"type": "string"}}
+            }
+          }
+        }
+      }
+    }
+  }
+}
