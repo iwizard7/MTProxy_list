@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T12:30:16.904533+00:00",
+  "updated_at": "2026-10-10T18:34:49.688310+00:00",
   "published": true,
   "publish_blocked_reasons": [],
   "sources": [
@@ -28,29 +28,29 @@
   "source_history": {
     "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt": {
       "kind": "list",
-      "runs": 9,
-      "last_run": "2026-10-10T12:30:16.904533+00:00",
-      "last_ok": "2026-10-10T12:30:16.904533+00:00",
+      "runs": 10,
+      "last_run": "2026-10-10T18:34:49.688310+00:00",
+      "last_ok": "2026-10-10T18:34:49.688310+00:00",
       "last_error": null,
       "last_links_found": 163,
       "last_links_accepted": 162,
       "last_new_endpoints": 160,
-      "total_new_endpoints": 1544,
-      "total_links_accepted": 1546,
-      "ok_runs": 9
+      "total_new_endpoints": 1704,
+      "total_links_accepted": 1708,
+      "ok_runs": 10
     },
     "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt": {
       "kind": "list",
-      "runs": 9,
-      "last_run": "2026-10-10T12:30:16.904533+00:00",
-      "last_ok": "2026-10-10T12:30:16.904533+00:00",
+      "runs": 10,
+      "last_run": "2026-10-10T18:34:49.688310+00:00",
+      "last_ok": "2026-10-10T18:34:49.688310+00:00",
       "last_error": null,
       "last_links_found": 198,
       "last_links_accepted": 198,
       "last_new_endpoints": 69,
-      "total_new_endpoints": 598,
-      "total_links_accepted": 1853,
-      "ok_runs": 9
+      "total_new_endpoints": 667,
+      "total_links_accepted": 2051,
+      "ok_runs": 10
     }
   },
   "sources_ok": 2,
@@ -59,19 +59,19 @@
   "duplicate_endpoints_removed": 2,
   "checked_candidates": 229,
   "skipped_by_cap": 0,
-  "mtproto_verified": 202,
-  "stable_in_window": 235,
+  "mtproto_verified": 204,
+  "stable_in_window": 237,
   "best_published": 20,
-  "blocked_non_public": 3,
+  "blocked_non_public": 4,
   "block_reasons": {
-    "dns_no_addresses": 3
+    "dns_no_addresses": 4
   },
   "rejected_links": {
     "bad_secret": 1
   },
-  "average_rtt_ms": 482.36,
-  "average_check_ms": 624.56,
-  "median_rtt_ms": 409.98,
+  "average_rtt_ms": 643.85,
+  "average_check_ms": 810.88,
+  "median_rtt_ms": 501.79,
   "dns_cache": {
     "hosts": 263,
     "hits": 0,
