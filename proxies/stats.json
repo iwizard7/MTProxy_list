@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T12:48:00.588671+00:00",
+  "updated_at": "2026-10-11T18:53:52.260145+00:00",
   "published": true,
   "publish_blocked_reasons": [],
   "sources": [
@@ -16,11 +16,11 @@
     {
       "url": "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt",
       "ok": true,
-      "bytes": 13915,
-      "links_found": 163,
-      "links_accepted": 162,
-      "endpoints_new": 17,
-      "duplicate_endpoints": 145,
+      "bytes": 14173,
+      "links_found": 166,
+      "links_accepted": 165,
+      "endpoints_new": 14,
+      "duplicate_endpoints": 151,
       "error": null
     }
   ],
@@ -28,39 +28,39 @@
   "source_history": {
     "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt": {
       "kind": "list",
-      "runs": 13,
-      "last_run": "2026-10-11T12:48:00.588671+00:00",
-      "last_ok": "2026-10-11T12:48:00.588671+00:00",
+      "runs": 14,
+      "last_run": "2026-10-11T18:53:52.260145+00:00",
+      "last_ok": "2026-10-11T18:53:52.260145+00:00",
       "last_error": null,
       "last_links_found": 210,
       "last_links_accepted": 206,
       "last_new_endpoints": 199,
-      "total_new_endpoints": 2223,
-      "total_links_accepted": 2234,
-      "ok_runs": 13
+      "total_new_endpoints": 2422,
+      "total_links_accepted": 2440,
+      "ok_runs": 14
     },
     "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt": {
       "kind": "list",
-      "runs": 13,
-      "last_run": "2026-10-11T12:48:00.588671+00:00",
-      "last_ok": "2026-10-11T12:48:00.588671+00:00",
+      "runs": 14,
+      "last_run": "2026-10-11T18:53:52.260145+00:00",
+      "last_ok": "2026-10-11T18:53:52.260145+00:00",
       "last_error": null,
-      "last_links_found": 163,
-      "last_links_accepted": 162,
-      "last_new_endpoints": 17,
-      "total_new_endpoints": 785,
-      "total_links_accepted": 2573,
-      "ok_runs": 13
+      "last_links_found": 166,
+      "last_links_accepted": 165,
+      "last_new_endpoints": 14,
+      "total_new_endpoints": 799,
+      "total_links_accepted": 2738,
+      "ok_runs": 14
     }
   },
   "sources_ok": 2,
   "sources_total": 2,
-  "discovered": 216,
+  "discovered": 213,
   "duplicate_endpoints_removed": 8,
-  "checked_candidates": 216,
+  "checked_candidates": 213,
   "skipped_by_cap": 0,
-  "mtproto_verified": 190,
-  "stable_in_window": 237,
+  "mtproto_verified": 194,
+  "stable_in_window": 238,
   "best_published": 20,
   "blocked_non_public": 2,
   "block_reasons": {
@@ -69,13 +69,13 @@
   "rejected_links": {
     "bad_secret": 5
   },
-  "average_rtt_ms": 634.51,
-  "average_check_ms": 795.98,
-  "median_rtt_ms": 544.0,
+  "average_rtt_ms": 488.71,
+  "average_check_ms": 673.55,
+  "median_rtt_ms": 399.78,
   "dns_cache": {
     "hosts": 274,
-    "hits": 1,
-    "misses": 183,
+    "hits": 2,
+    "misses": 180,
     "ttl_hours": 6.0
   },
   "engines": [
