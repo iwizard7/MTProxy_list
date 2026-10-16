@@ -3,9 +3,8 @@ tg://proxy?server=ahvaz.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d0
 tg://proxy?server=irluxcars.site&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=royaclinic.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=luxuryman.sbs&port=4455&secret=dd104462821249bd7ac519130220c25d09
-tg://proxy?server=royaclinic.beauty&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=ir.flipme.info&port=8443&secret=EERighJJvXrFGRMCIMjdCQ
-tg://proxy?server=91.107.140.144&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
+tg://proxy?server=royaclinic.beauty&port=4455&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=88.99.175.124&port=8&secret=ameuTC0XO0FodFQ1yzE6OQQ1yzE60Q
 tg://proxy?server=94.130.15.206&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=167.233.89.249&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA
@@ -13,8 +12,9 @@ tg://proxy?server=91.107.171.35&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=167.235.197.46&port=8443&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=167.235.197.87&port=8443&secret=dd79e344818749bd7ac519130220c25d09
 tg://proxy?server=se.anotelinopalk.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
+tg://proxy?server=noon.begir.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ
 tg://proxy?server=91.107.160.196&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
-tg://proxy?server=dokhtar.nanaz.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ
-tg://proxy?server=haf.anotelinopalk.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=bookmook.hichibehichi-co.info&port=2882&secret=dd10400103324995b07c030386e886e7f1
+tg://proxy?server=haf.anotelinopalk.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ
+tg://proxy?server=craft.malavanann.co.uk&port=2083&secret=eeNEgYdJvXrFGRMCIMJdCQ
 tg://proxy?server=shoes.golgoli2.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ
