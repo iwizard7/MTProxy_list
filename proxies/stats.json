@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T11:02:48.958542+00:00",
+  "updated_at": "2026-10-18T15:51:18.112110+00:00",
   "published": true,
   "publish_blocked_reasons": [],
   "sources": [
@@ -28,29 +28,29 @@
   "source_history": {
     "https://raw.githubusercontent.com/ALIILAPRO/MTProtoProxy/main/mtproto.txt": {
       "kind": "list",
-      "runs": 44,
-      "last_run": "2026-10-18T11:02:48.958542+00:00",
-      "last_ok": "2026-10-18T11:02:48.958542+00:00",
+      "runs": 45,
+      "last_run": "2026-10-18T15:51:18.112110+00:00",
+      "last_ok": "2026-10-18T15:51:18.112110+00:00",
       "last_error": null,
       "last_links_found": 145,
       "last_links_accepted": 145,
       "last_new_endpoints": 144,
-      "total_new_endpoints": 7659,
-      "total_links_accepted": 7707,
-      "ok_runs": 44
+      "total_new_endpoints": 7803,
+      "total_links_accepted": 7852,
+      "ok_runs": 45
     },
     "https://raw.githubusercontent.com/Argh94/Proxy-List/main/MTProto.txt": {
       "kind": "list",
-      "runs": 44,
-      "last_run": "2026-10-18T11:02:48.958542+00:00",
-      "last_ok": "2026-10-18T11:02:48.958542+00:00",
+      "runs": 45,
+      "last_run": "2026-10-18T15:51:18.112110+00:00",
+      "last_ok": "2026-10-18T15:51:18.112110+00:00",
       "last_error": null,
       "last_links_found": 204,
       "last_links_accepted": 203,
       "last_new_endpoints": 74,
-      "total_new_endpoints": 2655,
-      "total_links_accepted": 8847,
-      "ok_runs": 44
+      "total_new_endpoints": 2729,
+      "total_links_accepted": 9050,
+      "ok_runs": 45
     }
   },
   "sources_ok": 2,
@@ -59,7 +59,7 @@
   "duplicate_endpoints_removed": 3,
   "checked_candidates": 218,
   "skipped_by_cap": 0,
-  "mtproto_verified": 207,
+  "mtproto_verified": 206,
   "stable_in_window": 267,
   "best_published": 20,
   "blocked_non_public": 1,
@@ -69,13 +69,13 @@
   "rejected_links": {
     "bad_secret": 1
   },
-  "average_rtt_ms": 662.51,
-  "average_check_ms": 764.67,
-  "median_rtt_ms": 587.07,
+  "average_rtt_ms": 622.11,
+  "average_check_ms": 756.48,
+  "median_rtt_ms": 576.89,
   "dns_cache": {
     "hosts": 381,
-    "hits": 0,
-    "misses": 197,
+    "hits": 197,
+    "misses": 0,
     "ttl_hours": 6.0
   },
   "engines": [
