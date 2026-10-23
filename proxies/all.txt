@@ -45,6 +45,7 @@ tg://proxy?server=46.224.160.92&port=8443&secret=dd104462821249bd7ac519130220c25
 tg://proxy?server=46.224.27.205&port=443&secret=eeDarKDarKDarKDarKDarK
 tg://proxy?server=46.225.148.183&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=62.238.11.183&port=8443&secret=dd104462821249bd7ac519130220c25d09
+tg://proxy?server=65.108.123.76&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=65.109.147.34&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=65.109.147.39&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=65.109.248.100&port=8443&secret=dd104462821249bd7ac519130220c25d09
@@ -53,7 +54,6 @@ tg://proxy?server=731.masi.ir.he6fhd.ru&port=8443&secret=dd104462821249bd7ac5191
 tg://proxy?server=79.137.196.223&port=21443&secret=ee70d02df07ecb5669b6eb010aba55eab07777772e636c6f7564666c6172652e636f6d
 tg://proxy?server=7hd78fr.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=89.167.29.101&port=8443&secret=EERighJJvXrFGRMCIMjdCQ
-tg://proxy?server=91.107.140.144&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=91.107.171.35&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0
 tg://proxy?server=91.98.100.233&port=8443&secret=dd104462821249bd7ac519130220c25d09
 tg://proxy?server=91.98.103.228&port=8443&secret=dd104462821249bd7ac519130220c25d09
@@ -234,6 +234,7 @@ tg://proxy?server=recordzan.herfeibash.info&port=7799&secret=dd10400103324995b07
 tg://proxy?server=redflag.yazaebalsyadelatproxy.co.uk&port=443&secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363
 tg://proxy?server=redflag.yazaebalsyadelatproxy.com&port=443&secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363
 tg://proxy?server=redflag.yazaebalsyadelatproxy.uk&port=443&secret=ee69e899d89ec68e220ca177557322b27f726564666c61672e79617a616562616c73796164656c617470726f78792e6363
+tg://proxy?server=redflag.yazaebalsyadelatproxy.vip&port=443&secret=eeae5ab45be1bccbba85eec21085b2fd20726564666c61672e79617a616562616c73796164656c617470726f78792e766970
 tg://proxy?server=refiq.poolaki.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ
 tg://proxy?server=relay.surfvpn.app&port=443&secret=eedf44a4347c1eb8938c7e63340bd1ca4972656c61792e7375726676706e2e617070
 tg://proxy?server=reyhoon.shambelile.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ
