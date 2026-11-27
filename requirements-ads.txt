@@ -3,4 +3,4 @@
 # Kept separate from requirements.txt so that the main collector stays free of
 # Telegram-account dependencies. Install with:
 #   pip install -r requirements-ads.txt
-telethon==1.45.0
+telethon==1.46.0
